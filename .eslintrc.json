@@ -1,3 +1,97 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "next/core-web-vitals"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/indent": [
+      "error",
+      2
+    ],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "no-await-in-loop": "error",
+    "no-promise-executor-return": "error",
+    "require-atomic-updates": "error",
+    "max-nested-callbacks": [
+      "error",
+      5
+    ],
+    "no-return-await": "error",
+    "prefer-promise-reject-errors": [
+      "error",
+      {
+        "allowEmptyReject": true
+      }
+    ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "no-unused-vars": "warn",
+    "consistent-return": "error",
+    "comma-dangle": "off",
+    "complexity": "error",
+    "default-case": "error",
+    "no-implicit-coercion": "error",
+    // "no-magic-numbers": "error",
+    "yoda": "error",
+    "no-shadow": "error",
+    // must be have return in the functions
+    "no-restricted-imports": [
+      "error",
+      "underscore"
+    ],
+    // lodash and underscore there are the same features, so we restricted underscore
+    "eqeqeq": [
+      "warn"
+    ],
+    // "===" instead "=="
+    "indent": "off",
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": "off",
+    "react/no-array-index-key": "error",
+    "react/jsx-key": "error",
+    "react/sort-prop-types": "error",
+    "react/jsx-no-constructed-context-values": "warn",
+    "react/no-unknown-property": "error",
+    // "react-hooks/exhaustive-deps": "error",
+    "react/default-props-match-prop-types": "error",
+    // "react/no-unused-prop-types and react/no-unused-class-component-methods": "error",
+    "react/jsx-curly-newline": "error",
+    "react/jsx-curly-brace-presence": "error",
+    // "promise/always-return": "error",
+    "react/no-danger": "error",
+    // "prefer-spread and react/destructuring-assignment": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/jsx-no-script-url": "error"
+  }
+  // ____________________________--------------------____________________________
+  // "scripts": {
+  //    "test": "echo \"Error: no test specified\" && exit 1",
+  //    "lint": "eslint  .",
+  //    "lint-fix": "eslint . --fix",
+  //    "build": "webpack --mode production",
+  //    "dev": "webpack-dev-server --mode development"
+  //  },
 }
