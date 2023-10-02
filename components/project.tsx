@@ -1,10 +1,9 @@
 'use client';
 
-import { projectsData } from '@/lib/data';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import Image from 'next/image';
 import { useRef } from 'react';
-
+import { projectsData } from '@/lib/data';
+import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -15,30 +14,16 @@ export default function Project({
   imageUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
-  // use useScroll hook to get scroll position
   const { scrollYProgress } = useScroll({
     target: ref,
-    // "0 1": 0 at top, 1 at bottom of scroll container. "1.33 1": scroll down 33%, 1 is actual size at bottom
     offset: ['0 1', '1.33 1'],
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-  // <motion.div
-  //   // Pass ref to useScroll hook
-  //   ref={ref}
-  //   // Pass styling props from framer motion hooks
-  //   style={{
-  //     scale: scaleProgess,
-  //     opacity: opacityProgess,
-  //   }}
-  //   className="group mb-3 last:mb-0 sm:mb-8"
-  // ></motion.div>
 
   return (
     <motion.div
-      // Pass ref to useScroll hook
       ref={ref}
-      // Pass styling props from framer motion hooks
       style={{
         scale: scaleProgess,
         opacity: opacityProgess,
@@ -68,7 +53,7 @@ export default function Project({
           alt='Project I worked on'
           quality={95}
           className='absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition
-        group-even:-left-40
+        group-even:-left-40 
         group-even:right-[initial]
         group-hover:-translate-x-3
         group-hover:translate-y-3

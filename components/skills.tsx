@@ -1,9 +1,10 @@
 'use client';
 
+import React from 'react';
+import SectionHeading from './section-heading';
 import { skillsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import SectionHeading from './section-heading';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -13,16 +14,14 @@ const fadeInAnimationVariants = {
   animate: (index: number) => ({
     opacity: 1,
     y: 0,
-    // each li has a delay of index * 0.05 seconds
     transition: {
       delay: 0.05 * index,
     },
   }),
 };
 
-
 export default function Skills() {
-  const { ref } = useSectionInView('Skills', 0.1);
+  const { ref } = useSectionInView('Skills');
 
   return (
     <section
@@ -34,16 +33,14 @@ export default function Skills() {
       <ul className='flex flex-wrap justify-center gap-2 text-lg text-gray-800'>
         {skillsData.map((skill, index) => (
           <motion.li
-            className='bg-white border-black border rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80'
+            className='borderBlack rounded-xl bg-white px-5 py-3 dark:bg-white/10 dark:text-white/80'
             key={index}
             variants={fadeInAnimationVariants}
             initial='initial'
-            // only animate whileInView
             whileInView='animate'
             viewport={{
               once: true,
             }}
-            // pass each li index to animate variants
             custom={index}
           >
             {skill}

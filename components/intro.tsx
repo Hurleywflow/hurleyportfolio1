@@ -1,40 +1,53 @@
 'use client';
-import { useSectionInView } from '@/lib/hooks';
-import { motion } from 'framer-motion';
+
 import Image from 'next/image';
+import React from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
+import { FaGithubSquare } from 'react-icons/fa';
+import { useSectionInView } from '@/lib/hooks';
+import { useActiveSectionContext } from '@/context/active-section-context';
 
 export default function Intro() {
-  const { ref } = useSectionInView('Home');
+  const { ref } = useSectionInView('Home', 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <section id='home' className='mx-auto max-w-[50rem] scroll-mt-48' ref={ref}>
-      <div className='flex items-center justify-center '>
+    <section
+      ref={ref}
+      id='home'
+      className='mb-28 max-w-[50rem] scroll-mt-[100rem] text-center sm:mb-0'
+    >
+      <div className='flex items-center justify-center'>
         <div className='relative'>
           <motion.div
-            initial={{ opacity: 0, scale: 0.3 }}
+            initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.2, ease: 'easeInOut', type: 'tween' }}
+            transition={{
+              type: 'tween',
+              duration: 0.2,
+            }}
           >
             <Image
-              className='h-24 w-24 rounded-full border-4 border-white object-cover shadow-xl'
-              src='http://unsplash.it/368/368?random&gravity=center'
-              width={192}
-              height={192}
+              src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100'
+              alt='Ricardo portrait'
+              width='192'
+              height='192'
+              quality='95'
               priority={true}
-              alt='Hurley portrait'
-            ></Image>
+              className='h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl'
+            />
           </motion.div>
+
           <motion.span
             className='absolute bottom-0 right-0 text-4xl'
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
-              stiffness: 125,
               type: 'spring',
+              stiffness: 125,
               delay: 0.1,
               duration: 0.7,
             }}
@@ -43,6 +56,7 @@ export default function Intro() {
           </motion.span>
         </div>
       </div>
+
       <motion.h1
         className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
         initial={{ opacity: 0, y: 100 }}
@@ -56,28 +70,27 @@ export default function Intro() {
       </motion.h1>
 
       <motion.div
-        className='flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row'
+        className='flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
           delay: 0.1,
         }}
       >
-        {/* Contact me button */}
         <Link
           href='#contact'
-          className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition duration-0 ease-linear hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105'
-          // onClick={() => {
-          //   setActiveSection("Contact");
-          //   setTimeOfLastClick(Date.now());
-          // }}
+          className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105'
+          onClick={() => {
+            setActiveSection('Contact');
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{' '}
           <BsArrowRight className='opacity-70 transition group-hover:translate-x-1' />
         </Link>
-        {/* Download resume button, but we need to use a tag link for link download */}
+
         <a
-          className='group flex cursor-pointer items-center gap-2 rounded-full border-black/10 bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10'
+          className='borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10'
           href='/CV.pdf'
           download
         >

@@ -1,16 +1,17 @@
-import ActiveSectionContextProvider from '@/context/active-section-context';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import Header from '../components/header';
+import Header from '@/components/header';
 import './globals.css';
+import { Inter } from 'next/font/google';
+import ActiveSectionContextProvider from '@/context/active-section-context';
+import Footer from '@/components/footer';
+import ThemeSwitch from '@/components/theme-switch';
+import ThemeContextProvider from '@/context/theme-context';
+import { Toaster } from 'react-hot-toast';
 
-// Get fonts from Google Fonts
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Hurley | Personal Portfolio',
-  description:
-    'Hurley is a Jr developer with a passion for building things on the web.',
+  description: 'Hurley is a Junior developer with some years of experience.',
 };
 
 export default function RootLayout({
@@ -21,16 +22,21 @@ export default function RootLayout({
   return (
     <html lang='en' className='!scroll-smooth'>
       <body
-        className={`${inter.className} bg-gray-50 to-gray-950 pt-28 sm:pt-36 `}
+        className={`${inter.className} relative bg-gray-50 pt-28 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
       >
-        <div className='relative mx-auto flex items-center justify-center'>
-          <div className='absolute right-[-15rem] top-[-6rem] -z-10 h-[31.25rem] w-[32.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] sm:w-[68.75rem] md:right-[-11rem] lg:right-[-7rem] xl:right-[-3rem] 2xl:right-[20rem]'></div>
-          <div className='absolute left-[-15rem] top-[-6rem] -z-10 h-[31.25rem] w-[32.25rem] rounded-full bg-[#dbd7fb] blur-[10rem] sm:w-[68.75rem] md:left-[-11rem] lg:left-[-7rem] xl:left-[-3rem]  2xl:left-[20rem]'></div>
-        </div>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-        </ActiveSectionContextProvider>
+        <div className='absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]'></div>
+        <div className='absolute left-[-35rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#dbd7fb] blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]'></div>
+
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
+
+            <Toaster position='top-right' />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );

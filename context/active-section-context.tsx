@@ -1,7 +1,7 @@
 'use client';
 
 import type { SectionName } from '@/lib/types';
-import React, { createContext, useContext, useMemo, useState } from 'react';
+import React, { useState, createContext, useContext } from 'react';
 
 type ActiveSectionContextProviderProps = {
   children: React.ReactNode;
@@ -25,22 +25,18 @@ export default function ActiveSectionContextProvider({
 
   return (
     <ActiveSectionContext.Provider
-      value={useMemo(
-        () => ({
-          activeSection,
-          setActiveSection,
-          timeOfLastClick,
-          setTimeOfLastClick,
-        }),
-        [activeSection, setActiveSection, timeOfLastClick, setTimeOfLastClick],
-      )}
+      value={{
+        activeSection,
+        setActiveSection,
+        timeOfLastClick,
+        setTimeOfLastClick,
+      }}
     >
       {children}
     </ActiveSectionContext.Provider>
   );
 }
 
-// custom hook to expose context and avoid passing context directly to components
 export function useActiveSectionContext() {
   const context = useContext(ActiveSectionContext);
 
