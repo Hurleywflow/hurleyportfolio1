@@ -32,10 +32,13 @@ export const sendEmail = async (formData: FormData) => {
       to: 'hurleywflow@gmail.com',
       subject: 'Message from portfolio contact form',
       reply_to: senderEmail,
+      // Style and format email content with React.email components library for ts this file
       react: React.createElement(ContactFormEmail, {
         message: message,
         senderEmail: senderEmail,
       }),
+      // If tsx file we do the following instead:
+      // react: <ContactFormEmail message={message} senderEmail={senderEmail} />,
     });
   } catch (error: unknown) {
     return {
