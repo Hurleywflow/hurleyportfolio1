@@ -45,7 +45,6 @@ export default function Header() {
                 }}
               >
                 {link.name}
-
                 {link.name === activeSection && (
                   <motion.span
                     className='absolute inset-0 -z-10 rounded-full bg-gray-100 dark:bg-gray-800'

@@ -1,6 +1,12 @@
 'use client';
 
-import React, { useEffect, useState, createContext, useContext } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -49,10 +55,13 @@ export default function ThemeContextProvider({
 
   return (
     <ThemeContext.Provider
-      value={{
-        theme,
-        toggleTheme,
-      }}
+      value={useMemo(
+        () => ({
+          theme,
+          toggleTheme,
+        }),
+        [theme, toggleTheme],
+      )}
     >
       {children}
     </ThemeContext.Provider>
@@ -61,10 +70,9 @@ export default function ThemeContextProvider({
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-
+  // check that context value is not null
   if (context === null) {
     throw new Error('useTheme must be used within a ThemeContextProvider');
   }
-
   return context;
 }
