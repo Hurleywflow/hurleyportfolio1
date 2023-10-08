@@ -1,11 +1,13 @@
 import Footer from '@/components/footer';
 import Header from '@/components/header';
+import { ParticlesContainer } from '@/components/particle-preset';
 import ThemeSwitch from '@/components/theme-switch';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-context';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import './globals.css';
+import ParticlesComponent from '@/components/particles';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +38,7 @@ export default function RootLayout({
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+        <ParticlesComponent />
       </body>
     </html>
   );
