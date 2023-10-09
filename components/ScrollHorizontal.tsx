@@ -13,7 +13,7 @@ className='fixed h-1 top-20 left-0 right-0 bg-gradient-to-l from-[#bd34fe] to-[#
 style={{scaleX: scrollYProgress}}
 /> */}
       <motion.div
-        className='fixed left-0 right-0 top-0 z-[100] h-1 origin-left bg-gradient-to-l from-[#bd34fe] to-[#47caff]'
+        className='fixed left-0 right-0 top-0 z-[100] h-1 origin-left bg-gradient-to-l from-[#bd34fe]/30 to-[#47caff]/30'
         style={{ width }}
       />
     </>

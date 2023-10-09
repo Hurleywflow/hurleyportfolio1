@@ -27,6 +27,7 @@ export default function Experience() {
                   theme === 'light' ? '#f3f4f6' : 'rgba(255, 255, 255, 0.05)',
                 boxShadow: 'none',
                 border: '1px solid rgba(0, 0, 0, 0.05)',
+                borderRadius: '1rem',
                 textAlign: 'left',
                 padding: '1.3rem 2rem',
               }}
@@ -40,13 +41,13 @@ export default function Experience() {
               icon={item.icon}
               iconStyle={{
                 background:
-                  theme === 'light' ? 'white' : 'rgba(255, 255, 255, 0.15)',
+                  theme === 'light' ? '#BEB8AE' : 'rgba(255, 255, 255, 0.5)',
                 fontSize: '1.5rem',
               }}
             >
               <h3 className='font-semibold capitalize'>{item.title}</h3>
               <p className='!mt-0 font-normal'>{item.location}</p>
-              <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>
+              <p className='text-gray-700 dark:text-white/75 !mt-1 !font-normal'>
                 {item.description}
               </p>
             </VerticalTimelineElement>

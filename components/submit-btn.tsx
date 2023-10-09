@@ -7,15 +7,15 @@ export default function SubmitBtn() {
   return (
     <button
       type='submit'
-      className='disabled:bg-opacity-45 group flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-gray-900 text-white outline-none transition-all hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105 disabled:scale-100 dark:bg-white dark:bg-opacity-10'
+      className=' disabled:bg-opacity-45 text-yellow-50 group mx-auto flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-[#BEB8AE]/80 text-xl outline-none transition-all hover:scale-110 hover:bg-[#BEB8AE] focus:scale-110 active:scale-105 disabled:scale-100 dark:bg-[#BEB8AE]/50 dark:hover:bg-[#BEB8AE]'
       disabled={pending}
     >
       {pending ? (
-        <div className='h-5 w-5 animate-spin rounded-full border-b-2 border-white'></div>
+        <div className='border-white h-5 w-5 animate-spin rounded-full border-b-2'></div>
       ) : (
         <>
           Submit{' '}
-          <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1' />{' '}
+          <FaPaperPlane className='text-lg opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1' />{' '}
         </>
       )}
     </button>

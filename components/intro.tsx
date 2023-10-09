@@ -1,14 +1,13 @@
 'use client';
 
-import Image from 'next/image';
-import React from 'react';
+import { useActiveSectionContext } from '@/context/active-section-context';
+import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
-import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
-import { useSectionInView } from '@/lib/hooks';
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { HiDownload } from 'react-icons/hi';
 
 export default function Intro() {
   const { ref } = useSectionInView('Home', 0.5);
@@ -32,12 +31,12 @@ export default function Intro() {
           >
             <Image
               src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100'
-              alt='Ricardo portrait'
+              alt='Hurley portrait'
               width='192'
               height='192'
               quality='95'
               priority={true}
-              className='h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl'
+              className='h-24 w-24 rounded-full border-[0.35rem] border-[#BEB8AE] object-cover shadow-2xl'
             />
           </motion.div>
 
@@ -62,15 +61,15 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className='font-bold'>Hello, I'm Hurley.</span> I'm a{' '}
-        <span className='font-bold'>Jr developer</span> with{' '}
+        <span className='font-bold text-[#BEB8AE]'>Hello, I'm Hurley.</span> I'm
+        a <span className='font-bold'>Jr developer</span> with{' '}
         <span className='font-bold'>some years</span> of experience. I enjoy
         building <span className='italic'>sites & apps</span>. My focus is{' '}
-        <span className='underline'>React (Next.js)</span>.
+        <span className='text-[#BEB8AE] underline'>React (Next.js)</span>.
       </motion.h1>
 
       <motion.div
-        className='flex flex-col items-center justify-center gap-2 px-4 text-lg font-medium sm:flex-row'
+        className='flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -79,18 +78,18 @@ export default function Intro() {
       >
         <Link
           href='#contact'
-          className='group flex items-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105'
+          className='text-white group flex items-center gap-4 rounded-full bg-[#BEB8AE]/70 px-7 py-3 outline-none transition hover:scale-110 hover:bg-[#BEB8AE] focus:scale-110 active:scale-105'
           onClick={() => {
             setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
           }}
         >
           Contact me here{' '}
-          <BsArrowRight className='opacity-70 transition group-hover:translate-x-1' />
+          <BsArrowRight className='opacity-90 transition group-hover:translate-x-1' />
         </Link>
 
         <a
-          className='borderBlack group flex cursor-pointer items-center gap-2 rounded-full bg-white px-7 py-3 outline-none transition hover:scale-110 focus:scale-110 active:scale-105 dark:bg-white/10'
+          className='borderBlack group flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 px-7 py-3 outline-none transition hover:scale-110 hover:bg-[#BEB8AE]/50 focus:scale-110 active:scale-105 dark:bg-[#BEB8AE]/20'
           href='/CV.pdf'
           download
         >
@@ -99,7 +98,7 @@ export default function Intro() {
         </a>
 
         <a
-          className='borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60'
+          className='borderBlack text-gray-700 hover:text-gray-950 dark:text-white/60 flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20'
           href='https://www.linkedin.com/in/hurley-nguyen-477346228/'
           target='_blank'
         >
@@ -107,7 +106,7 @@ export default function Intro() {
         </a>
 
         <a
-          className='borderBlack flex cursor-pointer items-center gap-2 rounded-full bg-white p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-white/10 dark:text-white/60'
+          className='borderBlack text-gray-700 hover:text-gray-950 dark:text-white/60 flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 text-[1.35rem] transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20'
           href='https://github.com/Hurleywflow'
           target='_blank'
         >

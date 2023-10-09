@@ -45,7 +45,7 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className='-mt-6 text-gray-700 dark:text-white/80'>
+      <p className='text-gray-700 dark:text-white/80 -mt-6'>
         Please contact me directly at{' '}
         <a className='underline' href='mailto:hurleywflow@gmail.com'>
           hurleywflow@gmail.com
@@ -54,11 +54,11 @@ export default function Contact() {
       </p>
 
       <form
-        className='mt-10 flex flex-col dark:text-black'
+        className='dark:text-black mt-5 flex flex-col gap-5'
         onSubmit={handleSubmitFromData}
       >
         <input
-          className='borderBlack h-14 rounded-lg px-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100'
+          className='borderBlack dark:bg-white h-14 rounded-lg px-4 transition-all dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100'
           name='senderEmail'
           type='email'
           required
@@ -66,7 +66,7 @@ export default function Contact() {
           placeholder='Your email'
         />
         <textarea
-          className='borderBlack my-3 h-52 rounded-lg p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100'
+          className='borderBlack dark:bg-white my-3 h-52 rounded-lg p-4 transition-all dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100'
           name='message'
           placeholder='Your message'
           required
