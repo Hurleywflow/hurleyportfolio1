@@ -47,6 +47,7 @@ export default function ThemeContextProvider({
       if (localTheme === 'dark') {
         document.documentElement.classList.add('dark');
       }
+      // automate theme based on system preferences
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setTheme('dark');
       document.documentElement.classList.add('dark');
