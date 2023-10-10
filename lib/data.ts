@@ -84,30 +84,30 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  // {
+  //   title: 'rmtDev',
+  //   description:
+  //     'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
+  //   tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
+  //   imageUrl: rmtdevImg,
+  //   linkDemo: 'https://www.apple.com/au/',
+  // },
   {
-    title: 'rmtDev',
-    description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: rmtdevImg,
-    linkDemo: 'https://www.apple.com/au/',
-  },
-  {
-    title: 'HurleyPortfolioV1',
+    title: 'HurleyPortfolio',
     description:
       'I have created my first portfolio to showcase all the projects I have completed so far. It demonstrates my abilities in working on a variety of web applications, including those with responsive designs and animation styles.',
     tags: ['React', 'Next.js', 'Tailwind'],
     imageUrl: p,
-    linkDemo: 'https://www.apple.com/au/',
+    linkDemo: 'https://portfoliohurley.vercel.app/',
   },
-  {
-    title: 'Word Analytics',
-    description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
-    imageUrl: wordanalyticsImg,
-    linkDemo: 'https://www.apple.com/au/',
-  },
+  // {
+  //   title: 'Word Analytics',
+  //   description:
+  //     'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
+  //   tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+  //   imageUrl: wordanalyticsImg,
+  //   linkDemo: 'https://www.apple.com/au/',
+  // },
 ] as const;
 
 export const skillsData = [
