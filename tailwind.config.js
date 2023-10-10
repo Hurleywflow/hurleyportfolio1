@@ -12,6 +12,10 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      // robbin cards
+      width: {
+        'square-diagonal': (Math.sqrt(2) * 100).toFixed(2) + '%',
+      },
     },
     animation: {
       bounce: 'bounce 3s infinite',
@@ -32,7 +36,7 @@ module.exports = {
       //   titanium: '#BEB8AE',
       // },
     },
-    plugins: [],
-    darkMode: 'class',
   },
+  plugins: [],
+  darkMode: 'class',
 };

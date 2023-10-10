@@ -43,11 +43,12 @@ export default function Experience() {
                 background:
                   theme === 'light' ? '#BEB8AE' : 'rgba(255, 255, 255, 0.5)',
                 fontSize: '1.5rem',
+                border: '0.4rem solid #BEB8AE',
               }}
             >
               <h3 className='font-semibold capitalize'>{item.title}</h3>
               <p className='!mt-0 font-normal'>{item.location}</p>
-              <p className='text-gray-700 dark:text-white/75 !mt-1 !font-normal'>
+              <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>
                 {item.description}
               </p>
             </VerticalTimelineElement>

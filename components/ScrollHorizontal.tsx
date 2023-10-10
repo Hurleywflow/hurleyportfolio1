@@ -9,11 +9,11 @@ export default function ScrollHorizontal() {
     <>
       {/* //todo: motion scrolling bar progress at navbar  */}
       {/* <motion.div
-className='fixed h-1 top-20 left-0 right-0 bg-gradient-to-l from-[#bd34fe] to-[#47caff] origin-left z-[100]'
+className='fixed h-1 top-20 left-0 right-0 bg-gradient-to-l from-[#A03DC1] to-[#FDDCFE] origin-left z-[100]'
 style={{scaleX: scrollYProgress}}
 /> */}
       <motion.div
-        className='fixed left-0 right-0 top-0 z-[100] h-1 origin-left bg-gradient-to-l from-[#bd34fe]/30 to-[#47caff]/30'
+        className='fixed left-0 right-0 top-0 z-[100] h-1 origin-left bg-gradient-to-l from-[#A03DC1] to-[#FDDCFE]'
         style={{ width }}
       />
     </>

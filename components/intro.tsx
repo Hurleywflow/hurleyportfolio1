@@ -1,6 +1,7 @@
 'use client';
 
 import { useActiveSectionContext } from '@/context/active-section-context';
+import avatarImg from '@/public/IMG_5503.jpg';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -30,7 +31,7 @@ export default function Intro() {
             }}
           >
             <Image
-              src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100'
+              src={avatarImg}
               alt='Hurley portrait'
               width='192'
               height='192'
@@ -78,7 +79,7 @@ export default function Intro() {
       >
         <Link
           href='#contact'
-          className='text-white group flex items-center gap-4 rounded-full bg-[#BEB8AE]/70 px-7 py-3 outline-none transition hover:scale-110 hover:bg-[#BEB8AE] focus:scale-110 active:scale-105'
+          className='group flex items-center gap-4 rounded-full bg-[#BEB8AE]/70 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-[#BEB8AE] focus:scale-110 active:scale-105'
           onClick={() => {
             setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
@@ -98,7 +99,7 @@ export default function Intro() {
         </a>
 
         <a
-          className='borderBlack text-gray-700 hover:text-gray-950 dark:text-white/60 flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20'
+          className='borderBlack flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 text-gray-700 transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20 dark:text-white/60'
           href='https://www.linkedin.com/in/hurley-nguyen-477346228/'
           target='_blank'
         >
@@ -106,7 +107,7 @@ export default function Intro() {
         </a>
 
         <a
-          className='borderBlack text-gray-700 hover:text-gray-950 dark:text-white/60 flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 text-[1.35rem] transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20'
+          className='borderBlack flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20 dark:text-white/60'
           href='https://github.com/Hurleywflow'
           target='_blank'
         >

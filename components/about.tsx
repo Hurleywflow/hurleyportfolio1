@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from './section-heading';
 
 export default function About() {
-  const { ref } = useSectionInView('About', 0.75);
+  const { ref } = useSectionInView('About', 0.4);
 
   return (
     <motion.section
@@ -33,14 +33,16 @@ export default function About() {
         developer.
       </p>
 
-      {/* <p>
-        <span className='italic'>When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{' '}
-        <span className='font-medium'>learning new things</span>. I am currently
-        learning about{' '}
-        <span className='font-medium'>history and philosophy</span>. I'm also
-        learning how to play the guitar.
-      </p> */}
+      <p>
+        <span className='font-medium'>
+          My passion for pursuing a career in Information Technology was
+          inspired by my fascination with{' '}
+          <span className='underline'>problem-solving</span> and technology. I
+          have always been intrigued by how technology can improve efficiency
+          and drive positive change. I am excited to contribute my skills and
+          knowledge to the field and make a meaningful impact.
+        </span>
+      </p>
     </motion.section>
   );
 }
