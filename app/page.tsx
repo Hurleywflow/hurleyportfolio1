@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import About from '@/components/about';
 import Contact from '@/components/contact';
 import Experience from '@/components/experience';

@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/react-in-jsx-scope */
 'use client';
 
 import { useActiveSectionContext } from '@/context/active-section-context';
@@ -102,6 +104,7 @@ export default function Intro() {
           className='borderBlack flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 text-gray-700 transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20 dark:text-white/60'
           href='https://www.linkedin.com/in/hurley-nguyen-477346228/'
           target='_blank'
+          rel='noreferrer'
         >
           <BsLinkedin />
         </a>
@@ -110,6 +113,7 @@ export default function Intro() {
           className='borderBlack flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 p-4 text-[1.35rem] text-gray-700 transition hover:scale-[1.15] hover:bg-[#BEB8AE]/50 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:bg-[#BEB8AE]/20 dark:text-white/60'
           href='https://github.com/Hurleywflow'
           target='_blank'
+          rel='noreferrer'
         >
           <FaGithubSquare />
         </a>

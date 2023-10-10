@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 'use client';
 import { projectsData } from '@/lib/data';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -37,7 +38,8 @@ export default function Project({
         <a
           target='_blank'
           href={linkDemo}
-          className='w-square-diagonal absolute bottom-0 right-0 block origin-bottom-right rotate-45 bg-amber-300 py-1.5 text-center text-xs font-semibold uppercase tracking-wider text-amber-800 shadow-sm hover:bg-yellow-300'
+          className='absolute bottom-0 right-0 block w-square-diagonal origin-bottom-right rotate-45 bg-amber-300 py-1.5 text-center text-xs font-semibold uppercase tracking-wider text-amber-800 shadow-sm hover:bg-yellow-300'
+          rel='noreferrer'
         >
           Peek Demo
         </a>

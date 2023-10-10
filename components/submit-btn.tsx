@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 import { FaPaperPlane } from 'react-icons/fa';
 

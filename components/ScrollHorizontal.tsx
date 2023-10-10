@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 'use client';
 import { motion, useScroll, useTransform } from 'framer-motion';
 

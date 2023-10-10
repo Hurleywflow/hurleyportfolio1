@@ -1,13 +1,13 @@
+/* eslint-disable react/react-in-jsx-scope */
 import Footer from '@/components/footer';
 import Header from '@/components/header';
-import { ParticlesContainer } from '@/components/particle-preset';
+import ParticlesComponent from '@/components/particles';
 import ThemeSwitch from '@/components/theme-switch';
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-context';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import './globals.css';
-import ParticlesComponent from '@/components/particles';
 const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
   title: 'Hurley | Personal Portfolio',

@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import corpcommentImg from '@/public/corpcomment.png';
 import rmtdevImg from '@/public/rmtdev.png';
+import p from '@/public/p.png';
 import wordanalyticsImg from '@/public/wordanalytics.png';
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
@@ -35,28 +37,46 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
-    location: 'Miami, FL',
+    title: 'Graduated Bachelor of Environmental Technology',
+    location: 'Vietnam',
     description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
+      'I completed my four-year studies and graduated. I have secured a job as an Engineer - Site Supervisor.',
     // The Icon used in ts file
     icon: React.createElement(LuGraduationCap),
-    date: '2019',
+    date: '2009',
   },
   {
-    title: 'Front-End Developer',
-    location: 'Orlando, FL',
+    title: 'Engineer - Site Supervisor',
+    location: 'Vietnam',
     description:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
+      'I ensured the site operated safely and efficiently by collaborating with senior management and stakeholders. I used strong leadership, communication, and project management skills to achieve operational excellence. I supervised both materials and employees at the site, and oversaw various activities related to the implementation and completion of the project',
     // The Icon used in ts file
     icon: React.createElement(CgWorkAlt),
-    date: '2019 - 2021',
+    date: '2009 - 2013',
   },
   {
-    title: 'Full-Stack Developer',
-    location: 'Houston, TX',
+    title: 'Casual Poultry Precess Worker',
+    location: 'Australia',
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+      'Manage the boning and slicing process of poultry. Administer operating tools and machines to the skin, bone, and slice of poultry. Move carcasses to chillers and freezers.',
+    // The Icon used in ts file
+    icon: React.createElement(CgWorkAlt),
+    date: '2013 - present',
+  },
+  {
+    title: 'Graduated Diploma of Information Technology',
+    location: 'Vic, Australia',
+    description:
+      'I have finished my studies and graduated with practical knowledge in the field of web development.',
+    // The Icon used in ts file
+    icon: React.createElement(LuGraduationCap),
+    date: '2020 - 2021',
+  },
+  {
+    title: 'Jr Fullstack Developer',
+    location: 'Vic, Australia',
+    description:
+      'I am currently working as a freelance Jr full-stack developer. My tech stack includes React, Next.js, JavaScript, TypeScript, Tailwind, Prisma, and MongoDB. I am actively seeking full-time opportunities.',
     // The Icon used in ts file
     icon: React.createElement(FaReact),
     date: '2021 - present',
@@ -65,19 +85,19 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: 'CorpComment',
-    description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-    imageUrl: corpcommentImg,
-    linkDemo: 'https://www.apple.com/au/',
-  },
-  {
     title: 'rmtDev',
     description:
       'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
     tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
     imageUrl: rmtdevImg,
+    linkDemo: 'https://www.apple.com/au/',
+  },
+  {
+    title: 'HurleyPortfolioV1',
+    description:
+      'I have created my first portfolio to showcase all the projects I have completed so far. It demonstrates my abilities in working on a variety of web applications, including those with responsive designs and animation styles.',
+    tags: ['React', 'Next.js', 'Tailwind'],
+    imageUrl: p,
     linkDemo: 'https://www.apple.com/au/',
   },
   {

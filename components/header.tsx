@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 'use client';
 
 import { useActiveSectionContext } from '@/context/active-section-context';

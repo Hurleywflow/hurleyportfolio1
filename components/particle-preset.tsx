@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 'use client';
 import Particles from 'react-particles';
 import type { Engine } from 'tsparticles-engine';
