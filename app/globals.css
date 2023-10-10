@@ -13,3 +13,17 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+/* theme toggle button ping */
+.animate-ping {
+  animation: ping 5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  25%,
+  75% {
+    transform: scale(1.2);
+    transition: linear;
+    opacity: 0.3;
+  }
+}

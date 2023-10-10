@@ -33,7 +33,11 @@ export default function ThemeSwitch() {
       }
       onClick={toggleTheme}
     >
-      {theme === 'light' ? <BsSun /> : <BsMoon />}
+      {theme === 'light' ? (
+        <BsSun className='animate-ping' />
+      ) : (
+        <BsMoon className='animate-ping' />
+      )}
     </button>
   );
 }
