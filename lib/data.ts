@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import corpcommentImg from '@/public/corpcomment.png';
+// import corpcommentImg from '@/public/corpcomment.png';
 import rmtdevImg from '@/public/rmtdev.png';
 import p from '@/public/p.png';
-import wordanalyticsImg from '@/public/wordanalytics.png';
+// import wordanalyticsImg from '@/public/wordanalytics.png';
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';
