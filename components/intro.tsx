@@ -3,8 +3,8 @@
 'use client';
 
 import { useActiveSectionContext } from '@/context/active-section-context';
-import avatarImg from '@/public/IMG_5503.jpg';
 import { useSectionInView } from '@/lib/hooks';
+import avatarImg from '@/public/IMG_5503.jpg';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -93,7 +93,7 @@ export default function Intro() {
 
         <a
           className='borderBlack group flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 px-7 py-3 outline-none transition hover:scale-110 hover:bg-[#BEB8AE]/50 focus:scale-110 active:scale-105 dark:bg-[#BEB8AE]/20'
-          href='/CV.pdf'
+          href='/Hurley_Nguyen_Resume.pdf'
           download
         >
           Download CV{' '}
