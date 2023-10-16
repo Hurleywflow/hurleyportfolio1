@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-fix": "eslint --cache . && eslint . --fix",
+    "format": "prettier --write .",
+    "lint:format": "prettier --cache --check .",
+    "test": "npm-run-all --parallel tsc:check lint-fix lint:format",
+    "tsc:check": "tsc"
   },
   "dependencies": {
     "@react-email/components": "^0.0.7",
@@ -41,6 +46,7 @@
     "typescript": "5.1.5"
   },
   "devDependencies": {
+    "@total-typescript/ts-reset": "^0.5.1",
     "@types/react-vertical-timeline-component": "^3.3.3",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",

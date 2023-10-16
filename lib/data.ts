@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // import corpcommentImg from '@/public/corpcomment.png';
-import rmtdevImg from '@/public/rmtdev.png';
 import p from '@/public/p.png';
+import p1 from '@/public/p1.png';
 // import wordanalyticsImg from '@/public/wordanalytics.png';
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
@@ -93,12 +93,20 @@ export const projectsData = [
   //   linkDemo: 'https://www.apple.com/au/',
   // },
   {
-    title: 'HurleyPortfolio',
+    title: 'Portfolio',
     description:
       'I have created my first portfolio to showcase all the projects I have completed so far. It demonstrates my abilities in working on a variety of web applications, including those with responsive designs and animation styles.',
     tags: ['React', 'Next.js', 'Tailwind'],
     imageUrl: p,
     linkDemo: 'https://portfoliohurley.vercel.app/',
+  },
+  {
+    title: 'HurleyPortfolio',
+    description:
+      'It is built with Next.js, React, and TypeScript. Reusability is enhanced through custom hooks like useTheme and useSectionInView. The project employs modern web technologies like Next.js, React, TypeScript, and Tailwind CSS. It follows good practices by separating components, pages, and hooks in the project structure. Overall, the codebase is clean and well-structured, making it an impressive showcase of your work as a developer on your personal portfolio website.',
+    tags: ['React', 'Next.js', 'Tailwind'],
+    imageUrl: p1,
+    linkDemo: 'https://hurleyportfolio1.vercel.app/',
   },
   // {
   //   title: 'Word Analytics',

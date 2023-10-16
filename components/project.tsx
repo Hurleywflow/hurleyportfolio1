@@ -28,7 +28,7 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className='group relative mb-3 last:mb-0 sm:mb-8'
+      className='group relative mb-3 flex last:mb-0 sm:mb-8'
     >
       {/* <!-- Top Right -->
       <!-- if want to move ribbon to center or move to edge, just change  w-36 --> */}
@@ -44,8 +44,8 @@ export default function Project({
           Peek Demo
         </a>
       </div>
-      <section className='relative max-w-[52rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8'>
-        <div className='flex h-full flex-col px-5 pb-7 pt-4 sm:max-w-[50%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[26rem]'>
+      <section className='relative flex max-w-[52rem] overflow-hidden rounded-lg border border-black/5 bg-gray-100 transition hover:bg-gray-200 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:h-[25rem] sm:pr-8 sm:group-even:pl-0'>
+        <div className='flex h-full flex-col px-5 pb-7 pt-4  sm:max-w-[55%] sm:pl-10 sm:pr-2 sm:pt-10 sm:group-even:ml-[45%] sm:group-even:pr-0 '>
           <h3 className='text-2xl font-semibold dark:text-yellow-50'>
             {title}
           </h3>
@@ -67,8 +67,8 @@ export default function Project({
           src={imageUrl}
           alt='Project I worked on'
           quality={95}
-          className='absolute -right-40 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition
-        group-even:-left-40
+          className='absolute -right-28 top-8 hidden w-[28.25rem] rounded-t-lg shadow-2xl transition
+        group-even:-left-28
         group-even:right-[initial]
         group-hover:-translate-x-3
         group-hover:translate-y-3

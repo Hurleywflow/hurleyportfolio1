@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from './section-heading';
 
 export default function About() {
-  const { ref } = useSectionInView('About', 0.4);
+  const { ref } = useSectionInView('About', 0.3);
 
   return (
     <motion.section
