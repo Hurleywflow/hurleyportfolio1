@@ -6,6 +6,7 @@ import { sendEmail } from '@/actions/sendEmail';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
 import toast from 'react-hot-toast';
+import { Reveal } from './reveal';
 import SectionHeading from './section-heading';
 import SubmitBtn from './submit-btn';
 
@@ -58,27 +59,29 @@ export default function Contact() {
         or through this form.
       </p>
 
-      <form
-        className='mt-5 flex flex-col gap-5 dark:text-black'
-        onSubmit={handleSubmitFromData}
-      >
-        <input
-          className='borderBlack h-14 rounded-lg px-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-80'
-          name='senderEmail'
-          type='email'
-          required
-          maxLength={500}
-          placeholder='Your email'
-        />
-        <textarea
-          className='borderBlack my-3 h-52 rounded-lg p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-80'
-          name='message'
-          placeholder='Your message'
-          required
-          maxLength={5000}
-        />
-        <SubmitBtn />
-      </form>
+      <Reveal>
+        <form
+          className='mt-5 flex flex-col gap-5 dark:text-black'
+          onSubmit={handleSubmitFromData}
+        >
+          <input
+            className='borderBlack h-14 rounded-lg px-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-80'
+            name='senderEmail'
+            type='email'
+            required
+            maxLength={500}
+            placeholder='Your email'
+          />
+          <textarea
+            className='borderBlack my-3 h-52 rounded-lg p-4 transition-all dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-80'
+            name='message'
+            placeholder='Your message'
+            required
+            maxLength={5000}
+          />
+          <SubmitBtn />
+        </form>
+      </Reveal>
     </motion.section>
   );
 }
