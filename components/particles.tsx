@@ -141,7 +141,7 @@ const ParticlesComponent = () => {
           events: {
             onClick: {
               enable: true,
-              mode: 'repulse',
+              mode: 'push',
             },
             onDiv: {
               selectors: [],
@@ -154,7 +154,7 @@ const ParticlesComponent = () => {
               mode: 'bubble',
               parallax: {
                 enable: true,
-                force: 50,
+                force: 25,
                 smooth: 10,
               },
             },
@@ -211,7 +211,7 @@ const ParticlesComponent = () => {
             push: {
               default: true,
               groups: [],
-              quantity: 4,
+              quantity: 5,
             },
             remove: {
               quantity: 2,
@@ -305,7 +305,7 @@ const ParticlesComponent = () => {
             },
           },
           color: {
-            value: '#ffffff',
+            value: '#d4e5ff',
             animation: {
               h: {
                 count: 0,
@@ -449,7 +449,7 @@ const ParticlesComponent = () => {
             close: true,
             fill: true,
             options: {},
-            type: 'star',
+            type: 'circle',
           },
           size: {
             random: {

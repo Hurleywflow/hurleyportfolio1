@@ -27,14 +27,14 @@ export default function ThemeContextProvider({
   const [theme, setTheme] = useState<Theme>('dark');
 
   const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-      window.localStorage.setItem('theme', 'dark');
-      document.documentElement.classList.add('dark');
-    } else {
+    if (theme === 'dark') {
       setTheme('light');
       window.localStorage.setItem('theme', 'light');
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+    } else {
+      setTheme('dark');
+      window.localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.remove('light');
     }
   };
 
