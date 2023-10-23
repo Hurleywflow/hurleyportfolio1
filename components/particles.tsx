@@ -448,8 +448,9 @@ const ParticlesComponent = () => {
           shape: {
             close: true,
             fill: true,
-            options: {},
-            type: 'circle',
+            options: {
+             },
+            type: 'star',
           },
           size: {
             random: {

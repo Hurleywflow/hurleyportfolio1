@@ -2,6 +2,7 @@
 'use client';
 
 import { useTheme } from '@/context/theme-context';
+import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
@@ -24,6 +25,19 @@ export default function ThemeSwitch() {
     };
     window.addEventListener('scroll', handleShadow);
   }, []);
+  const textVariants = {
+    toggleSunMoon: {
+      opacity: 0.3,
+      transition: {
+        delay: 0.3,
+        type: 'spring',
+        stiffness: 500,
+        damping: 2,
+        repeat: Infinity,
+      },
+    },
+  };
+
 
   return (
     <button
@@ -34,7 +48,15 @@ export default function ThemeSwitch() {
       }
       onClick={toggleTheme}
     >
-      {theme === 'light' ? <BsMoon /> : <BsSun />}
+      {theme === 'light' ? (
+        <motion.span variants={textVariants} animate='toggleSunMoon'>
+          <BsMoon />
+        </motion.span>
+      ) : (
+        <motion.span variants={textVariants} animate='toggleSunMoon'>
+          <BsSun />
+        </motion.span>
+      )}
     </button>
   );
 }
