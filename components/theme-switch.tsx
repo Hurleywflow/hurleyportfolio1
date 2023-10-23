@@ -31,13 +31,12 @@ export default function ThemeSwitch() {
       transition: {
         delay: 0.3,
         type: 'spring',
-        stiffness: 500,
+        stiffness: 10,
         damping: 2,
         repeat: Infinity,
       },
     },
   };
-
 
   return (
     <button
