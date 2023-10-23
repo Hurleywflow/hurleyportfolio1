@@ -1,12 +1,6 @@
 'use client';
 
-import React, {
-  createContext,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from 'react';
+import React, { useEffect, useState, createContext, useContext } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -24,17 +18,17 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 export default function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('light');
 
   const toggleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light');
-      window.localStorage.setItem('theme', 'light');
-      document.documentElement.classList.add('light');
-    } else {
+    if (theme === 'light') {
       setTheme('dark');
       window.localStorage.setItem('theme', 'dark');
-      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+    } else {
+      setTheme('light');
+      window.localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark');
     }
   };
 
@@ -47,7 +41,6 @@ export default function ThemeContextProvider({
       if (localTheme === 'dark') {
         document.documentElement.classList.add('dark');
       }
-      // automate theme based on system preferences
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       setTheme('dark');
       document.documentElement.classList.add('dark');
@@ -56,13 +49,10 @@ export default function ThemeContextProvider({
 
   return (
     <ThemeContext.Provider
-      value={useMemo(
-        () => ({
-          theme,
-          toggleTheme,
-        }),
-        [theme, toggleTheme],
-      )}
+      value={{
+        theme,
+        toggleTheme,
+      }}
     >
       {children}
     </ThemeContext.Provider>
@@ -71,9 +61,10 @@ export default function ThemeContextProvider({
 
 export function useTheme() {
   const context = useContext(ThemeContext);
-  // check that context value is not null
+
   if (context === null) {
     throw new Error('useTheme must be used within a ThemeContextProvider');
   }
+
   return context;
 }

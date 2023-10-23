@@ -29,16 +29,12 @@ export default function ThemeSwitch() {
     <button
       className={
         !shadow
-          ? 'fixed right-5 bottom-5 sm:top-[1.6rem] flex h-[3rem] w-[3rem] items-center justify-center rounded-full border border-none border-opacity-40 bg-[#BEB8AE]/90 bg-opacity-80 shadow-2xl backdrop-blur-[0.5rem] transition-all hover:scale-[1.15] hover:bg-[#BEB8AE]/20 active:scale-105 dark:bg-[#BEB8AE]/20 dark:hover:bg-[#BEB8AE]/90'
+          ? 'fixed bottom-5 right-5 flex h-[3rem] w-[3rem] items-center justify-center rounded-full border border-none border-opacity-40 bg-[#BEB8AE]/90 bg-opacity-80 shadow-2xl backdrop-blur-[0.5rem] transition-all hover:scale-[1.15] hover:bg-[#BEB8AE]/20 active:scale-105 dark:bg-[#BEB8AE]/20 dark:hover:bg-[#BEB8AE]/90 sm:top-[1.6rem]'
           : 'hidden'
       }
       onClick={toggleTheme}
     >
-      {theme === 'dark' ? (
-        <BsMoon className='animate-ping' />
-      ) : (
-        <BsSun className='animate-ping' />
-      )}
+      {theme === 'light' ? <BsMoon /> : <BsSun />}
     </button>
   );
 }
