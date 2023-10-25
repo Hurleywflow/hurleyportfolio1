@@ -9,6 +9,10 @@ html {
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
 }
+/* disable overscroll in viewport */
+body {
+  overscroll-behavior: none;
+}
 
 .borderBlack {
   @apply border border-black/10;

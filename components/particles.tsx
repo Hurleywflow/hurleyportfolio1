@@ -409,7 +409,8 @@ const ParticlesComponent = () => {
               height: 1080,
             },
             limit: 0,
-            value: 20,
+            // number of the particles allowed to be emitted concurrently
+            value: 39,
           },
           opacity: {
             random: {
@@ -450,7 +451,7 @@ const ParticlesComponent = () => {
             fill: true,
             options: {
              },
-            type: 'star',
+            type: 'circle',
           },
           size: {
             random: {

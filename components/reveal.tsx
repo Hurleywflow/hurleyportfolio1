@@ -33,7 +33,7 @@ export const Reveal = ({ children, width = 'w-fit' }: Props) => {
         animate={mainControls}
         // transition={{ duration: 0.5, delay: 0 }}
         // use this delay when use with thingy to reveal
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{ duration: 0.75, delay: 0.35 }}
       >
         {/* this is children components
         <Reveal>
@@ -51,7 +51,7 @@ export const Reveal = ({ children, width = 'w-fit' }: Props) => {
         }}
         initial='hidden'
         animate={slideControls}
-        transition={{ duration: 0.5, ease: 'easeIn' }}
+        transition={{ duration: 0.7, ease: 'easeIn' }}
         style={{
           position: 'absolute',
           top: 4,

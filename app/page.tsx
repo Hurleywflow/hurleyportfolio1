@@ -1,25 +1,22 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { Suspense, lazy } from 'react';
-const About = lazy(() => import('@/components/about'));
-const Contact = lazy(() => import('@/components/contact'));
-const Experience = lazy(() => import('@/components/experience'));
-const Intro = lazy(() => import('@/components/intro'));
-const Projects = lazy(() => import('@/components/projects'));
-const SectionDivider = lazy(() => import('@/components/section-divider'));
-const Skills = lazy(() => import('@/components/skills'));
-const renderLoader = () => <p>Loading</p>;
+import About from '@/components/about';
+import Contact from '@/components/contact';
+import Experience from '@/components/experience';
+import Intro from '@/components/intro';
+import Projects from '@/components/projects';
+import SectionDivider from '@/components/section-divider';
+import Skills from '@/components/skills';
+
 export default function Home() {
   return (
     <main className='flex flex-col items-center px-4'>
-      <Suspense fallback={renderLoader()}>
-        <Intro />
-        <SectionDivider />
-        <About />
-        <Projects />
-        <Skills />
-        <Experience />
-        <Contact />
-      </Suspense>
+      <Intro />
+      <SectionDivider />
+      <About />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
     </main>
   );
 }
