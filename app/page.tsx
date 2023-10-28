@@ -6,9 +6,8 @@ import IntroBlock from '@/components/intro';
 import ProjectsBlock from '@/components/projects';
 import SectionDividerBlock from '@/components/section-divider';
 import SkillsBlock from '@/components/skills';
-import { block } from 'million/react';
 
-const HomeBlock = block(function Home() {
+export default function Home() {
   return (
     <main className='flex flex-col items-center px-4'>
       <IntroBlock />
@@ -20,8 +19,7 @@ const HomeBlock = block(function Home() {
       <ContactBlock />
     </main>
   );
-});
-export default HomeBlock;
+}
 
 /* eslint-disable react/react-in-jsx-scope */
 // 'use client';

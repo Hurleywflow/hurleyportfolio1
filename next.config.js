@@ -1,4 +1,4 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const million = require('million/compiler');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
