@@ -1,9 +1,9 @@
-"use client"
+'use client';
 
 import { motion } from 'framer-motion';
+import { block } from 'million/react';
 
-
-export default function SectionDivider() {
+const SectionDividerBlock = block(function SectionDivider() {
   return (
     <motion.div
       className='my-24 hidden h-24 w-1 animate-bounce rounded-full bg-[#BEB8AE] dark:bg-[#BEB8AE]/60 sm:block'
@@ -12,4 +12,5 @@ export default function SectionDivider() {
       transition={{ delay: 0.125 }}
     ></motion.div>
   );
-}
+});
+export default SectionDividerBlock;

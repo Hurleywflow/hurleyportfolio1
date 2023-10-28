@@ -5,10 +5,11 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 import { links } from '@/lib/data';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
+import { block } from 'million/react';
 import Link from 'next/link';
 import ScrollHorizontal from './ScrollHorizontal';
 
-export default function Header() {
+const HeaderBlock = block(function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 
@@ -63,4 +64,5 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+});
+export default HeaderBlock;

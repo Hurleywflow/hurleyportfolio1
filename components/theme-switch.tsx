@@ -3,10 +3,11 @@
 
 import { useTheme } from '@/context/theme-context';
 import { motion } from 'framer-motion';
+import { block } from 'million/react';
 import { useEffect, useState } from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-export default function ThemeSwitch() {
+const ThemeSwitchBlock = block(function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
   const [shadow, setShadow] = useState(false);
   useEffect(() => {
@@ -58,4 +59,5 @@ export default function ThemeSwitch() {
       )}
     </button>
   );
-}
+});
+export default ThemeSwitchBlock;

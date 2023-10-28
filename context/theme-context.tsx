@@ -1,5 +1,6 @@
 'use client';
 
+import { block } from 'million/react';
 // import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 // type Theme = 'light' | 'dark';
@@ -108,7 +109,7 @@ const toggleTheme = (
   }
 };
 
-export default function ThemeContextProvider({
+const ThemeContextProviderBlock = block(function ThemeContextProvider({
   children,
 }: ThemeContextProviderProps) {
   const [theme, setTheme] = useState<Theme>('dark');
@@ -143,7 +144,8 @@ export default function ThemeContextProvider({
       {children}
     </ThemeContext.Provider>
   );
-}
+});
+export default ThemeContextProviderBlock;
 
 export function useTheme() {
   const context = useContext(ThemeContext);

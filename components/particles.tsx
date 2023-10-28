@@ -1,5 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 'use client';
+import { block } from 'million/react';
 import { useCallback } from 'react';
 import Particles from 'react-particles';
 import type { Container, Engine } from 'tsparticles-engine';
@@ -7,7 +8,7 @@ import type { Container, Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim'; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 //todo: npm install react-tsparticles tsparticles-slim tsparticles
 
-const ParticlesComponent = () => {
+const ParticlesComponentBlock = block(function ParticlesComponent() {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
 
@@ -449,8 +450,7 @@ const ParticlesComponent = () => {
           shape: {
             close: true,
             fill: true,
-            options: {
-             },
+            options: {},
             type: 'circle',
           },
           size: {
@@ -670,5 +670,5 @@ const ParticlesComponent = () => {
       }}
     />
   );
-};
-export default ParticlesComponent;
+});
+export default ParticlesComponentBlock;

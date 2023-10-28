@@ -2,12 +2,13 @@
 'use client';
 import { projectsData } from '@/lib/data';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { block } from 'million/react';
 import Image from 'next/image';
 import { useRef } from 'react';
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({
+const ProjectBlock = block(function Project({
   title,
   description,
   tags,
@@ -81,4 +82,5 @@ export default function Project({
       </section>
     </motion.div>
   );
-}
+});
+export default ProjectBlock;

@@ -5,12 +5,13 @@
 import { sendEmail } from '@/actions/sendEmail';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
+import { block } from 'million/react';
 import toast from 'react-hot-toast';
 import { Reveal } from './reveal';
-import SectionHeading from './section-heading';
-import SubmitBtn from './submit-btn';
+import SectionHeadingBlock from './section-heading';
+import SubmitBtnBlock from './submit-btn';
 
-export default function Contact() {
+const ContactBlock = block(function Contact() {
   const { ref } = useSectionInView('Contact');
   // function handleSubmitFromData
   const handleSubmitFromData = async (
@@ -19,6 +20,7 @@ export default function Contact() {
     event.preventDefault();
     const formData = new FormData(event.target as HTMLFormElement);
     const { data, error } = await sendEmail(formData);
+    console.log(data);
 
     if (error) {
       toast.error(error);
@@ -46,7 +48,7 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Contact me</SectionHeading>
+      <SectionHeadingBlock>Contact me</SectionHeadingBlock>
 
       <p className='-mt-6 text-gray-700 dark:text-white/80'>
         Please contact me directly at{' '}
@@ -79,9 +81,10 @@ export default function Contact() {
             required
             maxLength={5000}
           />
-          <SubmitBtn />
+          <SubmitBtnBlock />
         </form>
       </Reveal>
     </motion.section>
   );
-}
+});
+export default ContactBlock;

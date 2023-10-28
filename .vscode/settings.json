@@ -1,6 +1,4 @@
 {
   "editor.acceptSuggestionOnEnter": "on",
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "master"
-  ]
+  "githubPullRequests.ignoredPullRequestBranches": ["master"]
 }

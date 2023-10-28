@@ -3,10 +3,11 @@
 
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
+import { block } from 'million/react';
 import { Reveal } from './reveal';
-import SectionHeading from './section-heading';
+import SectionHeadingBlock from './section-heading';
 
-export default function About() {
+const AboutBlock = block(function About() {
   const { ref } = useSectionInView('About', 0.3);
 
   return (
@@ -18,7 +19,7 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id='about'
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeadingBlock>About me</SectionHeadingBlock>
       <Reveal>
         <p className='mb-3'>
           After graduating with a degree in{' '}
@@ -51,4 +52,5 @@ export default function About() {
       </Reveal>
     </motion.section>
   );
-}
+});
+export default AboutBlock;

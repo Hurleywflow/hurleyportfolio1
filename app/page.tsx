@@ -1,25 +1,27 @@
 /* eslint-disable react/react-in-jsx-scope */
-import About from '@/components/about';
-import Contact from '@/components/contact';
-import Experience from '@/components/experience';
-import Intro from '@/components/intro';
-import Projects from '@/components/projects';
-import SectionDivider from '@/components/section-divider';
-import Skills from '@/components/skills';
+import AboutBlock from '@/components/about';
+import ContactBlock from '@/components/contact';
+import ExperienceBlock from '@/components/experience';
+import IntroBlock from '@/components/intro';
+import ProjectsBlock from '@/components/projects';
+import SectionDividerBlock from '@/components/section-divider';
+import SkillsBlock from '@/components/skills';
+import { block } from 'million/react';
 
-export default function Home() {
+const HomeBlock = block(function Home() {
   return (
     <main className='flex flex-col items-center px-4'>
-      <Intro />
-      <SectionDivider />
-      <About />
-      <Projects />
-      <Skills />
-      <Experience />
-      <Contact />
+      <IntroBlock />
+      <SectionDividerBlock />
+      <AboutBlock />
+      <ProjectsBlock />
+      <SkillsBlock />
+      <ExperienceBlock />
+      <ContactBlock />
     </main>
   );
-}
+});
+export default HomeBlock;
 
 /* eslint-disable react/react-in-jsx-scope */
 // 'use client';

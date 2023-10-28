@@ -1,8 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
+import { block } from 'million/react';
 import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 import { FaPaperPlane } from 'react-icons/fa';
 
-export default function SubmitBtn() {
+const SubmitBtnBlock = block(function SubmitBtn() {
   const { pending } = useFormStatus();
 
   return (
@@ -21,4 +22,5 @@ export default function SubmitBtn() {
       )}
     </button>
   );
-}
+});
+export default SubmitBtnBlock;

@@ -3,22 +3,23 @@
 import { useTheme } from '@/context/theme-context';
 import { experiencesData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
+import { block } from 'million/react';
 import React, { Suspense } from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-import SectionHeading from './section-heading';
-const renderLoader = () => <p>Loading</p>;
-export default function Experience() {
+import SectionHeadingBlock from './section-heading';
+const ExperienceBlock = block(function Experience() {
   const { ref } = useSectionInView('Experience');
   const { theme } = useTheme();
+  const renderLoader = () => <p>Loading</p>;
 
   return (
     <section id='experience' ref={ref} className='mb-28 scroll-mt-28 sm:mb-40'>
       <Suspense fallback={renderLoader()}>
-        <SectionHeading>My experience</SectionHeading>
+        <SectionHeadingBlock>My experience</SectionHeadingBlock>
         <VerticalTimeline lineColor=''>
           {experiencesData.map((item, index) => (
             <React.Fragment key={index}>
@@ -59,4 +60,5 @@ export default function Experience() {
       </Suspense>
     </section>
   );
-}
+});
+export default ExperienceBlock;

@@ -1,9 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
 'use client';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { block } from 'million/react';
 
 // todo: for scroll progress bar animation at navbar
-export default function ScrollHorizontal() {
+const ScrollHorizontalBlock = block(function ScrollHorizontal() {
   const { scrollYProgress } = useScroll();
   const width = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   return (
@@ -19,4 +20,5 @@ style={{scaleX: scrollYProgress}}
       />
     </>
   );
-}
+});
+export default ScrollHorizontalBlock;

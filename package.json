@@ -4,13 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rm -rf dist && next build",
     "start": "next start",
     "lint": "next lint",
-    "lint-fix": "eslint --cache . && eslint . --fix",
     "format": "prettier --write .",
     "lint:format": "prettier --cache --check .",
-    "test": "npm-run-all --parallel tsc:check lint-fix lint:format",
+    "lint-fix": "prettier --write . && eslint --cache . && eslint . --fix",
     "tsc:check": "tsc"
   },
   "dependencies": {
@@ -29,6 +28,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "framer-motion": "^10.12.17",
+    "million": "^2.6.4",
     "next": "13.5.6",
     "postcss": "8.4.24",
     "prettier-eslint-cli": "^7.1.0",
