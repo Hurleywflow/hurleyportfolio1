@@ -13,6 +13,7 @@ import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
 
 import { block } from 'million/react';
+import { AnimatedText } from './animatedText';
 
 const IntroBlock = block(function Intro() {
   const { ref } = useSectionInView('Home', 0.5);
@@ -70,7 +71,12 @@ const IntroBlock = block(function Intro() {
         a <span className='font-bold'>Jr developer</span> with{' '}
         <span className='font-bold'>some years</span> of experience. I enjoy
         building <span className='italic'>sites & apps</span>. My focus is{' '}
-        <span className='text-[#BEB8AE] underline'>React (Next.js)</span>.
+        <AnimatedText
+          el='span'
+          text={['React (Next.js)']}
+          className='text-[#BEB8AE] underline'
+          repeatDelay={5000}
+        />
       </motion.h1>
 
       <motion.div

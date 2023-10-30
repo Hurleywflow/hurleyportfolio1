@@ -4,6 +4,7 @@ import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 import { FaPaperPlane } from 'react-icons/fa';
 
 const SubmitBtnBlock = block(function SubmitBtn() {
+  
   const { pending } = useFormStatus();
 
   return (

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import p from '@/public/p.png';
-import p1 from '@/public/p1.png';
+import p from '@/public/p.jpg';
+import p1 from '@/public/p1.jpg';
 import React from 'react';
 import { CgWorkAlt } from 'react-icons/cg';
 import { FaReact } from 'react-icons/fa';

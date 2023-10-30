@@ -15,6 +15,7 @@ export const metadata = {
   title: 'Hurley | Personal Portfolio',
   description: 'Hurley is a Junior developer with some years of experience.',
 };
+
 export default function RootLayout({
   children,
 }: {
