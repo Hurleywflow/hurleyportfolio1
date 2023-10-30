@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unknown-property */
 import { motion, useInView } from 'framer-motion';
-import { block } from 'million/react';
 import React, { useRef } from 'react';
 const variants = {
   initial: {
@@ -24,9 +23,7 @@ type SectionHeadingProps = {
   children: React.ReactNode;
 };
 
-const SectionHeadingBlock = block(function SectionHeading({
-  children,
-}: SectionHeadingProps) {
+const SectionHeadingBlock = ({ children }: SectionHeadingProps) => {
   const ref = useRef<HTMLHeadingElement>(null);
   const isInView = useInView(ref, { margin: '-100px' });
   return (
@@ -42,6 +39,6 @@ const SectionHeadingBlock = block(function SectionHeading({
       {children}
     </motion.h2>
   );
-});
+};
 
 export default SectionHeadingBlock;
