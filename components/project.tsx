@@ -31,6 +31,7 @@ const ProjectBlock = block(function Project({
       }}
       className='group relative mb-3 flex last:mb-0 sm:mb-8'
     >
+      
       {/* <!-- Top Right -->
       <!-- if want to move ribbon to center or move to edge, just change  w-36 --> */}
       <div className='absolute -right-2 -top-2 z-50 aspect-square w-24 overflow-hidden rounded-sm'>

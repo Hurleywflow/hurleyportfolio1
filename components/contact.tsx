@@ -53,7 +53,7 @@ const ContactBlock = block(function Contact() {
       <p className='-mt-6 text-gray-700 dark:text-white/80'>
         Please contact me directly at{' '}
         <a
-          className='decoration-slice underline decoration-[#beb8ae] underline-offset-4'
+          className='decoration-slice underline decoration-[#beb8ae] underline-offset-4 font-semibold hover:decoration-none'
           href='mailto:hurleywflow@gmail.com'
         >
           hurleywflow@gmail.com
