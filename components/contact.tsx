@@ -34,7 +34,7 @@ const ContactBlock = block(function Contact() {
     <motion.section
       id='contact'
       ref={ref}
-      className='mb-20 w-[min(100%,38rem)] text-center sm:mb-28'
+      className='mb-20 h-fit w-[min(100%,38rem)] text-center sm:mb-28'
       initial={{
         opacity: 0,
       }}
@@ -53,7 +53,7 @@ const ContactBlock = block(function Contact() {
       <p className='-mt-6 text-gray-700 dark:text-white/80'>
         Please contact me directly at{' '}
         <a
-          className='decoration-slice underline decoration-[#beb8ae] underline-offset-4 font-semibold hover:decoration-none'
+          className='hover:decoration-none decoration-slice font-semibold underline decoration-[#beb8ae] underline-offset-4'
           href='mailto:hurleywflow@gmail.com'
         >
           hurleywflow@gmail.com
