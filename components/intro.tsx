@@ -67,7 +67,9 @@ const IntroBlock = block(function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className='text-gradient-siri font-semibold'>Hello, I'm Hurley.</span>{' '}
+        <span className='text-gradient-siri font-semibold'>
+          Hello, I'm Hurley.
+        </span>{' '}
         I'm a <span className='font-bold'>Jr developer</span> with{' '}
         <span className='font-semibold'>some years</span> of experience. I enjoy
         building <span className='italic'>sites & apps</span>. My focus is{' '}
@@ -89,18 +91,18 @@ const IntroBlock = block(function Intro() {
       >
         <Link
           href='#contact'
-          className='group flex items-center gap-4 rounded-full bg-[#BEB8AE]/70 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-[#BEB8AE] focus:scale-110 active:scale-105'
+          className='group flex items-center gap-4 rounded-full bg-black px-7 py-3 text-[#BEB8AE] outline-none transition hover:scale-110 hover:bg-[#BEB8AE] hover:text-gray-900 focus:scale-110 active:scale-105'
           onClick={() => {
             setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
           }}
         >
           Contact me here{' '}
-          <BsArrowRight className='opacity-90 transition group-hover:translate-x-1' />
+          <BsArrowRight className='opacity-90 transition group-hover:translate-x-1-x-1' />
         </Link>
 
         <a
-          className='borderBlack group flex cursor-pointer items-center gap-4 rounded-full bg-[#BEB8AE]/10 px-7 py-3 outline-none transition hover:scale-110 hover:bg-[#BEB8AE]/50 focus:scale-110 active:scale-105 dark:bg-[#BEB8AE]/20'
+          className='borderBlack group flex cursor-pointer items-center gap-4 rounded-full bg-gray-100 px-7 py-3 outline-none transition hover:scale-110 hover:bg-[#BEB8AE]/50 hover:text-gray-50 focus:scale-110 active:scale-105 dark:bg-[#BEB8AE]/20'
           href='/Hurley_Nguyen_Resume.pdf'
           download
         >
