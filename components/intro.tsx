@@ -63,18 +63,18 @@ const IntroBlock = block(function Intro() {
       </div>
 
       <motion.h1
-        className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
+        className='mb-10 mt-4 px-4 text-3xl font-medium !leading-[1.5] md:text-5xl'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className='font-bold text-[#BEB8AE]'>Hello, I'm Hurley.</span> I'm
-        a <span className='font-bold'>Jr developer</span> with{' '}
-        <span className='font-bold'>some years</span> of experience. I enjoy
+        <span className='text-gradient-siri font-semibold'>Hello, I'm Hurley.</span>{' '}
+        I'm a <span className='font-bold'>Jr developer</span> with{' '}
+        <span className='font-semibold'>some years</span> of experience. I enjoy
         building <span className='italic'>sites & apps</span>. My focus is{' '}
         <AnimatedText
           el='span'
           text={['React (Next.js)']}
-          className='text-[#BEB8AE] underline'
+          className='text-[#BEB8AE]'
           repeatDelay={5000}
         />
       </motion.h1>

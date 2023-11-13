@@ -38,24 +38,61 @@ body {
   }
 
   .text-gradient {
-    background: linear-gradient(to right bottom, rgb(255, 255, 255) 30%, rgba(255, 255, 255, 0.38));
+    background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255) 30%,
+      rgba(255, 255, 255, 0.38)
+    );
     background-clip: text;
     color: transparent;
   }
 
   .mask-radial-faded {
-    mask-image: radial-gradient(circle at center center, black, transparent 80%)
+    mask-image: radial-gradient(
+      circle at center center,
+      black,
+      transparent 80%
+    );
   }
 
   .mask-linear-faded {
-    mask-image: linear-gradient(black, transparent 70%)
+    mask-image: linear-gradient(black, transparent 70%);
   }
 
   .mask-keyboard {
-    mask-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.57) 33.98%, black 100%);
+    mask-image: linear-gradient(
+      transparent 0%,
+      rgba(0, 0, 0, 0.57) 33.98%,
+      black 100%
+    );
   }
 
   .mask-shortcutkeys {
-    mask-image: linear-gradient(to right, transparent, black 40%, black calc(60%), transparent 100%);
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 40%,
+      black calc(60%),
+      transparent 100%
+    );
   }
+}
+
+/* gradient text repo */
+.text-gradient-mini {
+  @apply bg-[linear-gradient(_90deg,rgb(255,167,69)_-40.94%,rgb(254,134,159)_12.71%,rgb(239,122,200)_28.38%,rgb(160,131,237)_62.03%,rgb(67,174,255)_82.03%_)] bg-clip-text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.text-gradient-siri {
+  background: -webkit-linear-gradient(
+    0deg,
+    #BEB8AE,
+    #fe869f 30%,
+    #ef7ac8 45%,
+    #a083ed 70%,
+    #BEB8AE 85%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

@@ -4,12 +4,12 @@ import { StarsIllustration } from './stars';
 
 function StarOnEarth() {
   return (
-    <div className='relative flex h-full w-full flex-col items-center justify-center'>
+    <div className='relative flex h-full w-screen flex-col items-center justify-center'>
       <div
         className={classNames(
-          'mask-radial-faded pointer-events-none relative z-[-1] my-[-12.8rem] h-[60rem] overflow-hidden',
+          'mask-radial-faded pointer-events-none relative z-[-1] my-[-25rem] h-[80rem] w-screen overflow-hidden',
           '[--color:#7877C6] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]',
-          'after:bg-background after:absolute after:-left-1/2 after:top-1/2 after:h-[142.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[rgba(120,_119,_198,_0.4)]',
+          'after after:absolute after:-left-1/2 after:top-1/2 after:h-[142.8%] after:w-[200%] after:rounded-[50%] after:border-t after:border-[#C7DEFA] after:bg-[#FBFAF5]  dark:after:border-[rgba(120,_119,_198,_0.4)] dark:after:bg-background',
         )}
       >
         <StarsIllustration />

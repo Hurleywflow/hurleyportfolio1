@@ -50,10 +50,10 @@ const ContactBlock = block(function Contact() {
     >
       <SectionHeadingBlock>Contact me</SectionHeadingBlock>
 
-      <p className='-mt-6 text-gray-700 dark:text-white/80'>
+      <p className='-mt-6 mb-3 text-gray-700 dark:text-white/80'>
         Please contact me directly at{' '}
         <a
-          className='hover:decoration-none decoration-slice font-semibold underline decoration-[#beb8ae] underline-offset-4'
+          className='hover:decoration-none text-gradient-siri font-semibold underline decoration-[#beb8ae] underline-offset-4'
           href='mailto:hurleywflow@gmail.com'
         >
           hurleywflow@gmail.com

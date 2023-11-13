@@ -28,7 +28,7 @@ const SectionHeadingBlock = ({ children }: SectionHeadingProps) => {
   // const ref = useRef<HTMLHeadingElement>(null);
   // const isInView = useInView(ref, { margin: '-100px' });
   return (
-    <h2 className='mb-8 text-center text-3xl font-medium capitalize text-[#BEB8AE]'>
+    <h2 className='text-gradient-mini mb-16 text-center text-3xl md:text-5xl font-medium capitalize'>
       {/* <EnjoyIssueTracking /> */}
       {children}
     </h2>
@@ -43,7 +43,6 @@ const SectionHeadingBlock = ({ children }: SectionHeadingProps) => {
     // >
     //   {children}
     // </motion.h2>
-    
   );
 };
 

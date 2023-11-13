@@ -34,7 +34,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.className} relative bg-[#56704c] pt-28 text-gray-900 dark:bg-[#08051D] dark:text-yellow-50 dark:text-opacity-90 sm:pt-36`}
+        className={`${inter.className} relative bg-[#DED7FB] pt-28 text-gray-900 dark:bg-[#08051D] dark:text-yellow-50 dark:text-opacity-90 sm:pt-36`}
       >
         <ThemeContextProviderBlock>
           <ActiveSectionContextProviderBlock>
