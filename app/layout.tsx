@@ -1,19 +1,27 @@
 /* eslint-disable react/react-in-jsx-scope */
 import FooterBlock from '@/components/footer';
 import Header from '@/components/header';
-import ThemeSwitchBlock from '@/components/theme-switch';
-import ActiveSectionContextProviderBlock from '@/context/active-section-context';
-import ThemeContextProviderBlock from '@/context/theme-context';
+import { Toaster } from '@/lib/framer';
 import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
 import React from 'react';
-import { Toaster } from 'react-hot-toast';
 import './globals.css';
+// import ThemeSwitchBlock from '@/components/theme-switch';
+const ThemeSwitchBlock = dynamic(() => import('@/components/theme-switch'));
+
+// import ActiveSectionContextProviderBlock from '@/context/active-section-context';
+const ActiveSectionContextProviderBlock = dynamic(
+  () => import('@/context/active-section-context'),
+);
+// import ThemeContextProviderBlock from '@/context/theme-context';
+const ThemeContextProviderBlock = dynamic(
+  () => import('@/context/theme-context'),
+);
+
 const DynamicParticlesComponentBlock = dynamic(
   () => import('@/components/particles'),
 );
 
-// import ParticlesComponentBlock from '@/components/particles';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {

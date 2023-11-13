@@ -35,19 +35,23 @@ const IntroBlock = block(function Intro() {
               duration: 0.2,
             }}
           >
-            <Image
-              src={avatarImg}
-              alt='Hurley portrait'
-              width='192'
-              height='192'
-              quality='95'
-              priority={true}
-              className='h-24 w-24 rounded-full border-[0.35rem] border-[#BEB8AE] object-cover shadow-2xl'
-            />
+            <div className='mask-avatar-faded  relative flex h-36 w-36 items-center justify-center rounded-full'>
+              <div className='absolute left-6 top-6  h-24 w-24 rounded-full'>
+                <Image
+                  src={avatarImg}
+                  alt='Hurley portrait'
+                  width='192'
+                  height='192'
+                  quality='95'
+                  priority={false}
+                  className=' h-full w-full rounded-full border-none backdrop-blur-3xl mix-blend-normal object-cover shadow-2xl'
+                />
+              </div>
+            </div>
           </motion.div>
 
           <motion.span
-            className='absolute bottom-0 right-0 text-4xl'
+            className='absolute bottom-4 right-4 text-4xl'
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -98,7 +102,7 @@ const IntroBlock = block(function Intro() {
           }}
         >
           Contact me here{' '}
-          <BsArrowRight className='opacity-90 transition group-hover:translate-x-1-x-1' />
+          <BsArrowRight className='group-hover:translate-x-1-x-1 opacity-90 transition' />
         </Link>
 
         <a

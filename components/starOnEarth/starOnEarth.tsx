@@ -4,7 +4,7 @@ import { StarsIllustration } from './stars';
 
 function StarOnEarth() {
   return (
-    <div className='relative flex h-full w-full flex-col items-center justify-center dark:w-[60%]'>
+    <div className='relative flex h-full w-full flex-col items-center justify-center'>
       <div
         className={classNames(
           'mask-radial-faded pointer-events-none relative z-[-1] my-[-45rem] h-[100rem] w-full overflow-hidden dark:my-[-40rem]',

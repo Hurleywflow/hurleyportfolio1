@@ -87,14 +87,23 @@ body {
 .text-gradient-siri {
   background: -webkit-linear-gradient(
     0deg,
-    #BEB8AE,
+    #beb8ae,
     #fe869f 30%,
     #ef7ac8 45%,
     #a083ed 70%,
-    #BEB8AE 85%
+    #beb8ae 85%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
+/* avatar  */
+.mask-avatar-faded {
+  background-image: radial-gradient(
+    circle at center center,
+    #beb8ae,
+    #fe869f 40%,
+    #a083ed 10%,
+    transparent 70%
+  );
+}
