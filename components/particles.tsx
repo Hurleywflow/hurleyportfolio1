@@ -8,7 +8,7 @@ import type { Container, Engine } from 'tsparticles-engine';
 import { loadSlim } from 'tsparticles-slim'; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 //todo: npm install react-tsparticles tsparticles-slim tsparticles
 
-const ParticlesComponentBlock = block(function ParticlesComponent() {
+const ParticlesComponentBlock = block(() => {
   const particlesInit = useCallback(async (engine: Engine) => {
     console.log(engine);
 
@@ -359,7 +359,7 @@ const ParticlesComponentBlock = block(function ParticlesComponent() {
             },
             decay: 0,
             distance: {},
-            direction: 'none',
+            direction: 'bottom',
             drift: 0,
             enable: true,
             gravity: {

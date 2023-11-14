@@ -1,3 +1,4 @@
+import { MotionDiv } from '@/lib/framer';
 import classNames from 'classnames';
 import ContactBlock from '../contact';
 import { StarsIllustration } from './stars';
@@ -5,7 +6,18 @@ import { StarsIllustration } from './stars';
 function StarOnEarth() {
   return (
     <div className='relative flex h-full w-full flex-col items-center justify-center'>
-      <div
+      <MotionDiv
+        variants={{
+          hidden: { opacity: 0.1, y: -300 },
+        }}
+        initial='hidden'
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        // transition={{ duration: 0.5, delay: 0 }}
+        // use this delay when use with thingy to reveal
+        transition={{ duration: 3, delay: 0.5 }}
         className={classNames(
           'mask-radial-faded pointer-events-none relative z-[-1] my-[-45rem] h-[100rem] w-full overflow-hidden dark:my-[-40rem]',
           '[--color:#7877C6] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]',
@@ -13,11 +25,12 @@ function StarOnEarth() {
         )}
       >
         <StarsIllustration />
-      </div>
+      </MotionDiv>
       <ContactBlock />
     </div>
   );
 }
+
 export default StarOnEarth;
 
 // tailwind.config.js

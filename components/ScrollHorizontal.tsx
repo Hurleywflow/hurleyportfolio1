@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { block } from 'million/react';
 
 // todo: for scroll progress bar animation at navbar
-const ScrollHorizontalBlock = block(function ScrollHorizontal() {
+const ScrollHorizontalBlock = block(() => {
   const { scrollYProgress } = useScroll();
   const width = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
   return (

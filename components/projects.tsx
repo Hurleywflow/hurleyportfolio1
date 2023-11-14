@@ -7,13 +7,13 @@ import React from 'react';
 import ProjectBlock from './project';
 import SectionHeadingBlock from './section-heading';
 
-const ProjectsBlock = block(function Projects() {
+const ProjectsBlock = block(() => {
   const { ref } = useSectionInView('Projects', 0.5);
 
   return (
     <section ref={ref} id='projects' className='mb-28 scroll-mt-28'>
       <SectionHeadingBlock>My projects</SectionHeadingBlock>
-      <div>
+      <div >
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <ProjectBlock {...project} />

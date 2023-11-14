@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { block } from 'million/react';
 
-const SectionDividerBlock = block(function SectionDivider() {
+const SectionDividerBlock = block(() => {
   return (
     <motion.div
       className='my-24 hidden h-36 w-1 animate-bounce rounded-full bg-[#BEB8AE] dark:bg-[#BEB8AE]/60 sm:block'

@@ -20,7 +20,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const SkillsBlock = block(function Skills() {
+const SkillsBlock = block(() => {
   const { ref } = useSectionInView('Skills');
 
   return (

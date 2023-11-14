@@ -7,7 +7,7 @@ import { block } from 'million/react';
 import { Reveal } from './reveal';
 import SectionHeadingBlock from './section-heading';
 
-const AboutBlock = block(function About() {
+const AboutBlock = block(() => {
   const { ref } = useSectionInView('About', 0.3);
 
   return (

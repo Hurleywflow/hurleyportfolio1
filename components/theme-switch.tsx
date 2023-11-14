@@ -7,7 +7,7 @@ import { block } from 'million/react';
 import { useEffect, useState } from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-const ThemeSwitchBlock = block(function ThemeSwitch() {
+const ThemeSwitchBlock = block(() => {
   const { theme, toggleTheme } = useTheme();
   const [shadow, setShadow] = useState(false);
   useEffect(() => {

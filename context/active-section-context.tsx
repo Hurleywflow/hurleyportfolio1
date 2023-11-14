@@ -1,6 +1,7 @@
 'use client';
 
 import type { SectionName } from '@/lib/types';
+import { block } from 'million/react';
 import React, { createContext, useContext, useMemo, useState } from 'react';
 
 type ActiveSectionContextProviderProps = {
@@ -17,7 +18,7 @@ type ActiveSectionContextType = {
 export const ActiveSectionContext =
   createContext<ActiveSectionContextType | null>(null);
 
-const ActiveSectionContextProviderBlock = ({
+const ActiveSectionContextProviderBlock = block(({
   children,
 }: ActiveSectionContextProviderProps) => {
   const [activeSection, setActiveSection] = useState<SectionName>('Home');
@@ -38,7 +39,7 @@ const ActiveSectionContextProviderBlock = ({
       {children}
     </ActiveSectionContext.Provider>
   );
-};
+})
 
 export default ActiveSectionContextProviderBlock;
 export function useActiveSectionContext() {

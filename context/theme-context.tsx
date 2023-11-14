@@ -1,5 +1,6 @@
 'use client';
 
+import { block } from 'million/react';
 // import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 // type Theme = 'light' | 'dark';
@@ -108,7 +109,7 @@ const toggleTheme = (
   }
 };
 
-const ThemeContextProviderBlock = ({ children }: ThemeContextProviderProps) => {
+const ThemeContextProviderBlock = block(({ children }: ThemeContextProviderProps) => {
   const [theme, setTheme] = useState<Theme>('dark');
 
   const memoizedToggleTheme = useCallback(
@@ -141,7 +142,7 @@ const ThemeContextProviderBlock = ({ children }: ThemeContextProviderProps) => {
       {children}
     </ThemeContext.Provider>
   );
-};
+})
 export default ThemeContextProviderBlock;
 
 export function useTheme() {

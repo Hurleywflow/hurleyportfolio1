@@ -11,7 +11,7 @@ import { Reveal } from './reveal';
 import SectionHeadingBlock from './section-heading';
 import SubmitBtnBlock from './submit-btn';
 
-const ContactBlock = block(function Contact() {
+const ContactBlock = block(() => {
   const { ref } = useSectionInView('Contact');
   // function handleSubmitFromData
   const handleSubmitFromData = async (

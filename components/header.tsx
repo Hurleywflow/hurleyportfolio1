@@ -9,7 +9,7 @@ import { block } from 'million/react';
 import Link from 'next/link';
 import ScrollHorizontal from './ScrollHorizontal';
 
-const HeaderBlock = block(function Header() {
+const HeaderBlock = block(() => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
 

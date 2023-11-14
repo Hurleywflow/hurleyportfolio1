@@ -12,10 +12,9 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { FaGithubSquare } from 'react-icons/fa';
 import { HiDownload } from 'react-icons/hi';
 
-import { block } from 'million/react';
 import { AnimatedText } from './animatedText';
 
-const IntroBlock = block(function Intro() {
+const IntroBlock = () => {
   const { ref } = useSectionInView('Home', 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -35,7 +34,7 @@ const IntroBlock = block(function Intro() {
               duration: 0.2,
             }}
           >
-            <div className='mask-avatar-faded  relative flex h-36 w-36 items-center justify-center rounded-full'>
+            <div className='mask-avatar-faded-light  relative flex h-36 w-36 items-center justify-center rounded-full'>
               <div className='absolute left-6 top-6  h-24 w-24 rounded-full'>
                 <Image
                   src={avatarImg}
@@ -44,7 +43,7 @@ const IntroBlock = block(function Intro() {
                   height='192'
                   quality='95'
                   priority={false}
-                  className=' h-full w-full rounded-full border-none backdrop-blur-3xl mix-blend-normal object-cover shadow-2xl'
+                  className=' h-full w-full rounded-full border-none object-cover mix-blend-normal shadow-2xl backdrop-blur-3xl'
                 />
               </div>
             </div>
@@ -95,7 +94,7 @@ const IntroBlock = block(function Intro() {
       >
         <Link
           href='#contact'
-          className='group flex items-center gap-4 rounded-full bg-black px-7 py-3 text-[#BEB8AE] outline-none transition hover:scale-110 hover:bg-[#BEB8AE] hover:text-gray-900 focus:scale-110 active:scale-105'
+          className='group flex items-center gap-4 rounded-full bg-black px-7 py-3 text-[#BEB8AE] outline-none transition hover:scale-110 hover:bg-[#BEB8AE] hover:text-gray-900 focus:scale-110 active:scale-105 dark:bg-[#BEB8AE]/50 dark:hover:bg-gray-500'
           onClick={() => {
             setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
@@ -134,5 +133,5 @@ const IntroBlock = block(function Intro() {
       </motion.div>
     </section>
   );
-});
+};
 export default IntroBlock;

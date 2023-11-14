@@ -11,7 +11,7 @@ import {
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import SectionHeadingBlock from './section-heading';
-const ExperienceBlock = block(function Experience() {
+const ExperienceBlock = block(() => {
   const { ref } = useSectionInView('Experience');
   const { theme } = useTheme();
   const renderLoader = () => <p>Loading</p>;

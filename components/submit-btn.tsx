@@ -3,14 +3,13 @@ import { block } from 'million/react';
 import { experimental_useFormStatus as useFormStatus } from 'react-dom';
 import { FaPaperPlane } from 'react-icons/fa';
 
-const SubmitBtnBlock = block(function SubmitBtn() {
-
+const SubmitBtnBlock = block(() => {
   const { pending } = useFormStatus();
 
   return (
     <button
       type='submit'
-      className=' disabled:bg-opacity-45 group mx-auto flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-[#BEB8AE]/80 text-xl text-white hover:text-black outline-none transition-all hover:scale-110 hover:bg-[#BEB8AE] focus:scale-110 active:scale-105 disabled:scale-100 dark:bg-[#BEB8AE]/50 dark:hover:bg-[#BEB8AE] mb-2'
+      className=' disabled:bg-opacity-45 group mx-auto mb-2 flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full bg-[#BEB8AE]/80 text-xl text-white outline-none transition-all hover:scale-110 hover:bg-[#BEB8AE] hover:text-black focus:scale-110 active:scale-105 disabled:scale-100 dark:bg-[#BEB8AE]/50 dark:hover:bg-[#BEB8AE]'
       disabled={pending}
     >
       {pending ? (

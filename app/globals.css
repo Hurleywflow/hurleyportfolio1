@@ -107,3 +107,12 @@ body {
     transparent 70%
   );
 }
+.mask-avatar-faded-light {
+  background-image: radial-gradient(
+    circle at center center,
+    #beb8ae,
+    #a083ed 10%,
+    #fe869f 5%,
+    transparent 70%
+  );
+}

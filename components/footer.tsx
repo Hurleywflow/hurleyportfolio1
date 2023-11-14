@@ -1,7 +1,7 @@
 import { block } from 'million/react';
 
 /* eslint-disable react/react-in-jsx-scope */
-const FooterBlock = block(function Footer() {
+const FooterBlock = block(() => {
   const year = new Date().getFullYear();
   return (
     <footer className='mb-10 px-4 text-center text-gray-500'>

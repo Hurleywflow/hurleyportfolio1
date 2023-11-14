@@ -10,17 +10,16 @@ import {
   Text,
 } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
-import { block } from 'million/react';
 
 type ContactFormEmailProps = {
   message: string;
   senderEmail: string;
 };
 
-const ContactFormEmailBlock = block(function ContactFormEmail({
+const ContactFormEmailBlock = ({
   message,
   senderEmail,
-}: ContactFormEmailProps) {
+}: ContactFormEmailProps) => {
   return (
     <Html>
       <Head />
@@ -41,5 +40,6 @@ const ContactFormEmailBlock = block(function ContactFormEmail({
       </Tailwind>
     </Html>
   );
-});
+};
+
 export default ContactFormEmailBlock;
