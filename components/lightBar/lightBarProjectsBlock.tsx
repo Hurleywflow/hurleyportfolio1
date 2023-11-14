@@ -1,10 +1,9 @@
 'use client';
 
-import { block } from 'million/react';
 import ProjectsBlock from '../projects';
 import LightBar from './lightBar';
 
-const LightBarProjectsBlock = block(() => {
+const LightBarProjectsBlock = () => {
   return (
     <LightBar color='0,225,244' colorDark='31,49,64'>
       {/* rgba(0,225,244,0.1) rgb(31,49,64) */}
@@ -14,7 +13,7 @@ const LightBarProjectsBlock = block(() => {
       </div>
     </LightBar>
   );
-});
+};
 export default LightBarProjectsBlock;
 
 // export const BuildMomentum = () => {

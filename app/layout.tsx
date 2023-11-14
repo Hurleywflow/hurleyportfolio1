@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import FooterBlock from '@/components/footer';
-import Header from '@/components/header';
+import HeaderBlock from '@/components/header';
 import { Toaster } from '@/lib/framer';
 import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
@@ -49,15 +49,15 @@ export default function RootLayout({
             <div className='absolute right-[11rem] top-[-6rem] -z-10 mx-auto h-[31.25rem] w-[31.25rem] rounded-full bg-[#FDDCFE] blur-[10rem] dark:bg-[#A03DC1]/70 sm:w-[68.75rem] md:right-[-33rem] lg:right-[-28rem] xl:right-[-15rem] 2xl:right-[-5rem]'></div>
             <div className='absolute left-[-35rem] top-[-1rem] -z-10 mx-auto h-[31.25rem] w-[50rem] rounded-full bg-[#FDDCFE] blur-[10rem] dark:bg-[#FDDCFE]/40 sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]'></div>
 
-            <Header />
+            <HeaderBlock />
             <Toaster position='top-right' />
             {children}
             <FooterBlock />
             <ThemeSwitchBlock />
           </ActiveSectionContextProviderBlock>
+          <DynamicParticlesComponentBlock />
         </ThemeContextProviderBlock>
         {/* <ParticlesComponentBlock /> */}
-        <DynamicParticlesComponentBlock />
       </body>
     </html>
   );

@@ -3,11 +3,10 @@
 
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import { block } from 'million/react';
 import { Reveal } from './reveal';
 import SectionHeadingBlock from './section-heading';
 
-const AboutBlock = block(() => {
+const AboutBlock = () => {
   const { ref } = useSectionInView('About', 0.3);
 
   return (
@@ -52,5 +51,5 @@ const AboutBlock = block(() => {
       </Reveal>
     </motion.section>
   );
-});
+};
 export default AboutBlock;

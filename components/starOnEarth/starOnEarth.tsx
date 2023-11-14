@@ -1,9 +1,10 @@
 import { MotionDiv } from '@/lib/framer';
 import classNames from 'classnames';
+import { block } from 'million/react';
 import ContactBlock from '../contact';
 import { StarsIllustration } from './stars';
 
-function StarOnEarth() {
+const StarOnEarth = block(function () {
   return (
     <div className='relative flex h-full w-full flex-col items-center justify-center'>
       <MotionDiv
@@ -15,7 +16,6 @@ function StarOnEarth() {
           opacity: 1,
           y: 0,
         }}
-        // transition={{ duration: 0.5, delay: 0 }}
         // use this delay when use with thingy to reveal
         transition={{ duration: 3, delay: 0.5 }}
         className={classNames(
@@ -29,7 +29,7 @@ function StarOnEarth() {
       <ContactBlock />
     </div>
   );
-}
+});
 
 export default StarOnEarth;
 

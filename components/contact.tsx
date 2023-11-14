@@ -5,13 +5,12 @@
 import { sendEmail } from '@/actions/sendEmail';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import { block } from 'million/react';
 import toast from 'react-hot-toast';
 import { Reveal } from './reveal';
 import SectionHeadingBlock from './section-heading';
 import SubmitBtnBlock from './submit-btn';
 
-const ContactBlock = block(() => {
+const ContactBlock = () => {
   const { ref } = useSectionInView('Contact');
   // function handleSubmitFromData
   const handleSubmitFromData = async (
@@ -28,6 +27,10 @@ const ContactBlock = block(() => {
     }
     toast.success('Email sent successfully!');
     (event.target as HTMLFormElement).reset();
+    // get delay 3 seconds before navigating to home page
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // use Nextjs router to navigate to home page
+    window.location.href = '/';
   };
 
   return (
@@ -86,5 +89,5 @@ const ContactBlock = block(() => {
       </Reveal>
     </motion.section>
   );
-});
+};
 export default ContactBlock;
