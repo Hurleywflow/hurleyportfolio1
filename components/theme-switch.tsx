@@ -3,11 +3,10 @@
 
 import { useTheme } from '@/context/theme-context';
 import { motion } from 'framer-motion';
-import { block } from 'million/react';
 import { useEffect, useState } from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-const ThemeSwitchBlock = block(() => {
+const ThemeSwitchBlock = () => {
   const { theme, toggleTheme } = useTheme();
   const [shadow, setShadow] = useState(false);
   useEffect(() => {
@@ -48,16 +47,16 @@ const ThemeSwitchBlock = block(() => {
       }
       onClick={toggleTheme}
     >
-      {theme === 'light' ? (
+      {theme === 'dark' ? (
         <motion.span variants={textVariants} animate='toggleSunMoon'>
-          <BsMoon />
+          <BsSun />
         </motion.span>
       ) : (
         <motion.span variants={textVariants} animate='toggleSunMoon'>
-          <BsSun />
+          <BsMoon />
         </motion.span>
       )}
     </button>
   );
-});
+};
 export default ThemeSwitchBlock;

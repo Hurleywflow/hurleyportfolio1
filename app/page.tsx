@@ -13,6 +13,7 @@ import SkillsBlock from '@/components/skills';
 import StarOnEarth from '@/components/starOnEarth/starOnEarth';
 
 export default function Home() {
+  
   return (
     <main className='flex flex-col items-center px-4'>
       <IntroBlock />
