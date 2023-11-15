@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
-'use client'
-import { MotionSection } from '@/lib/framer';
+'use client';
 import { useSectionInView } from '@/lib/hooks';
+import { motion } from 'framer-motion';
 import { Reveal } from './reveal';
 import SectionHeadingBlock from './section-heading';
 
@@ -9,7 +9,7 @@ const AboutBlock = () => {
   const { ref } = useSectionInView('About', 0.3);
 
   return (
-    <MotionSection
+    <motion.section
       ref={ref}
       className=' mb-28 max-w-[45rem] scroll-mt-28 text-center leading-8 sm:mb-40'
       initial={{ opacity: 0, y: 100 }}
@@ -48,7 +48,7 @@ const AboutBlock = () => {
           </span>
         </p>
       </Reveal>
-    </MotionSection>
+    </motion.section>
   );
 };
 export default AboutBlock;
