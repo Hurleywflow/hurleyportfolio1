@@ -3,7 +3,6 @@
 import { skillsData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import { block } from 'million/react';
 import SectionHeadingBlock from './section-heading';
 
 const fadeInAnimationVariants = {
@@ -20,7 +19,7 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const SkillsBlock = block(() => {
+const SkillsBlock = () => {
   const { ref } = useSectionInView('Skills');
 
   return (
@@ -49,5 +48,5 @@ const SkillsBlock = block(() => {
       </ul>
     </section>
   );
-});
+};
 export default SkillsBlock;

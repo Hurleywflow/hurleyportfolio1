@@ -10,7 +10,7 @@ type FeaturesProps = {
 };
 
 const LightBar = ({ children, color, colorDark }: FeaturesProps) => {
-  const { ref, inView } = useInView({ threshold: 0.3, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.2, triggerOnce: true });
 
   return (
     <section

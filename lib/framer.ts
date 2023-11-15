@@ -9,6 +9,11 @@ export const MotionImg = motion.img;
 export const MotionSvg = motion.svg;
 export const MotionPath = motion.path;
 export const MotionSpan = motion.span;
+export const MotionSection = motion.section;
+
+import { useEffect, useRef } from 'react';
+export const UseRef = useRef;
+export const UseEffect = useEffect;
 
 import dynamic from 'next/dynamic';
 export const Toaster = dynamic(() =>

@@ -9,9 +9,11 @@ import toast from 'react-hot-toast';
 import { Reveal } from './reveal';
 import SectionHeadingBlock from './section-heading';
 import SubmitBtnBlock from './submit-btn';
+import { useRouter } from 'next/navigation';
 
 const ContactBlock = () => {
   const { ref } = useSectionInView('Contact');
+  const router = useRouter();
   // function handleSubmitFromData
   const handleSubmitFromData = async (
     event: React.FormEvent<HTMLFormElement>,
@@ -28,9 +30,9 @@ const ContactBlock = () => {
     toast.success('Email sent successfully!');
     (event.target as HTMLFormElement).reset();
     // get delay 3 seconds before navigating to home page
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     // use Nextjs router to navigate to home page
-    window.location.href = '/';
+    router.push('/');
   };
 
   return (

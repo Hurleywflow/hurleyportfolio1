@@ -9,7 +9,7 @@ const StarOnEarth = block(function () {
     <div className='relative flex h-full w-full flex-col items-center justify-center'>
       <MotionDiv
         variants={{
-          hidden: { opacity: 0.1, y: -300 },
+          hidden: { opacity: 0.1, y: -200 },
         }}
         initial='hidden'
         whileInView={{
@@ -17,7 +17,7 @@ const StarOnEarth = block(function () {
           y: 0,
         }}
         // use this delay when use with thingy to reveal
-        transition={{ duration: 3, delay: 0.5 }}
+        transition={{ duration: 2, delay: 0.5 }}
         className={classNames(
           'mask-radial-faded pointer-events-none relative z-[-1] my-[-45rem] h-[100rem] w-full overflow-hidden dark:my-[-40rem]',
           '[--color:#7877C6] before:absolute before:inset-0 before:bg-radial-faded before:opacity-[0.4]',
