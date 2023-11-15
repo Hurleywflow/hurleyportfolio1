@@ -1,5 +1,3 @@
-'use client';
-
 import ExperienceBlock from '../experience';
 import LightBar from './lightBar';
 

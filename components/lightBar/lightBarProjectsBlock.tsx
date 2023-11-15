@@ -1,5 +1,3 @@
-'use client';
-
 import ProjectsBlock from '../projects';
 import LightBar from './lightBar';
 
