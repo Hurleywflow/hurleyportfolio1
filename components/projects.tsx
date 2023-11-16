@@ -7,7 +7,7 @@ import ProjectBlock from './project';
 import SectionHeadingBlock from './section-heading';
 
 const ProjectsBlock = () => {
-  const { ref } = useSectionInView('Projects', 0.5);
+  const { ref } = useSectionInView('Projects', 0.3);
 
   return (
     <section ref={ref} id='projects' className='mb-28 scroll-mt-28'>

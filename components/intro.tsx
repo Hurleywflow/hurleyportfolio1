@@ -27,12 +27,12 @@ const IntroBlock = () => {
       <div className='flex items-center justify-center'>
         <div className='relative'>
           <motion.div
-            // initial={{ opacity: 0, scale: 0 }}
-            // animate={{ opacity: 1, scale: 1 }}
-            // transition={{
-            //   type: 'tween',
-            //   duration: 0.2,
-            // }}
+          // initial={{ opacity: 0, scale: 0 }}
+          // animate={{ opacity: 1, scale: 1 }}
+          // transition={{
+          //   type: 'tween',
+          //   duration: 0.2,
+          // }}
           >
             <div className='mask-avatar-faded-light  relative flex h-36 w-36 items-center justify-center rounded-full'>
               <div className='absolute left-6 top-6  h-24 w-24 rounded-full'>
@@ -118,6 +118,7 @@ const IntroBlock = () => {
           href='https://www.linkedin.com/in/hurley-nguyen-477346228/'
           target='_blank'
           rel='noreferrer'
+          aria-label='Read more about personal profile on LinkedIn'
         >
           <BsLinkedin />
         </a>
@@ -127,6 +128,7 @@ const IntroBlock = () => {
           href='https://github.com/Hurleywflow'
           target='_blank'
           rel='noreferrer'
+          aria-label='Read more about repo on GitHub'
         >
           <FaGithubSquare />
         </a>

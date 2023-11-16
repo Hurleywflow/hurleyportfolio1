@@ -13,6 +13,7 @@ import SectionHeadingBlock from './section-heading';
 const ExperienceBlock = () => {
   const { ref } = useSectionInView('Experience');
   const { theme } = useTheme();
+  
 
   return (
     <section id='experience' ref={ref} className='mb-28 scroll-mt-28 sm:mb-40'>

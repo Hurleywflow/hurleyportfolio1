@@ -1,0 +1,12 @@
+{
+  "theme_color": "#08051D",
+  "name": "Portfolio",
+  "icons": [
+    {
+      "src": "/public/IMG_5503.jpg",
+      "type": "image/jpg",
+      "sizes": "24x24"
+    }
+  ],
+  "background_color": "#08051D"
+}

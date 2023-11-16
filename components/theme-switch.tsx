@@ -46,6 +46,8 @@ const ThemeSwitchBlock = () => {
           : 'hidden'
       }
       onClick={toggleTheme}
+      aria-label='Toggle Dark Mode'
+      title='Toggle'
     >
       {theme === 'dark' ? (
         <motion.span variants={textVariants} animate='toggleSunMoon'>

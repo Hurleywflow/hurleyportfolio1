@@ -29,9 +29,10 @@ export default function RootLayout({
           name='viewport'
           content='width=device-width, height=device-height, initial-scale=1'
         />
+        <meta name='theme-color' content='#08051D' />
       </head>
       <body
-        className={`${inter.className} relative bg-[#DED7FB] pt-28 text-gray-800 dark:bg-[#08051D] dark:text-gray-50 dark:text-opacity-90 sm:pt-36`}
+        className={`${inter.className} relative bg-[#DED7FB] pt-28 text-gray-800 dark:bg-[#08051D] dark:text-gray-50 sm:pt-36`}
       >
         <ThemeContextProviderBlock>
           <ActiveSectionContextProviderBlock>
