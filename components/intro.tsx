@@ -27,12 +27,12 @@ const IntroBlock = () => {
       <div className='flex items-center justify-center'>
         <div className='relative'>
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: 'tween',
-              duration: 0.2,
-            }}
+            // initial={{ opacity: 0, scale: 0 }}
+            // animate={{ opacity: 1, scale: 1 }}
+            // transition={{
+            //   type: 'tween',
+            //   duration: 0.2,
+            // }}
           >
             <div className='mask-avatar-faded-light  relative flex h-36 w-36 items-center justify-center rounded-full'>
               <div className='absolute left-6 top-6  h-24 w-24 rounded-full'>
@@ -41,8 +41,8 @@ const IntroBlock = () => {
                   alt='Hurley portrait'
                   width='192'
                   height='192'
-                  quality='95'
-                  priority={false}
+                  quality='50'
+                  priority={true}
                   className=' h-full w-full rounded-full border-none object-cover mix-blend-normal shadow-2xl backdrop-blur-3xl'
                 />
               </div>
@@ -51,14 +51,14 @@ const IntroBlock = () => {
 
           <motion.span
             className='absolute bottom-4 right-4 text-4xl'
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              type: 'spring',
-              stiffness: 125,
-              delay: 0.1,
-              duration: 0.7,
-            }}
+            // initial={{ opacity: 0, scale: 0 }}
+            // animate={{ opacity: 1, scale: 1 }}
+            // transition={{
+            //   type: 'spring',
+            //   stiffness: 125,
+            //   delay: 0.1,
+            //   duration: 0.7,
+            // }}
           >
             👋
           </motion.span>
@@ -67,8 +67,8 @@ const IntroBlock = () => {
 
       <motion.h1
         className='mb-10 mt-4 px-4 text-3xl font-medium !leading-[1.5] md:text-5xl'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+        // initial={{ opacity: 0, y: 100 }}
+        // animate={{ opacity: 1, y: 0 }}
       >
         <span className='text-gradient-siri font-semibold'>
           Hello, I'm Hurley.
@@ -86,11 +86,11 @@ const IntroBlock = () => {
 
       <motion.div
         className='flex flex-col items-center justify-center gap-4 px-4 text-lg font-medium sm:flex-row'
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.1,
-        }}
+        // initial={{ opacity: 0, y: 100 }}
+        // animate={{ opacity: 1, y: 0 }}
+        // transition={{
+        //   delay: 0.1,
+        // }}
       >
         <Link
           href='#contact'

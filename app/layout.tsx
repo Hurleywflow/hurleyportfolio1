@@ -43,9 +43,8 @@ export default function RootLayout({
             <FooterBlock />
             <ThemeSwitchBlock />
           </ActiveSectionContextProviderBlock>
-          <DynamicParticlesComponentBlock />
         </ThemeContextProviderBlock>
-        {/* <ParticlesComponentBlock /> */}
+        <DynamicParticlesComponentBlock />
       </body>
     </html>
   );
