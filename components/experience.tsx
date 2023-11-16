@@ -3,7 +3,6 @@
 import { useTheme } from '@/context/theme-context';
 import { experiencesData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
-import { block } from 'million/react';
 import React from 'react';
 import {
   VerticalTimeline,
@@ -58,4 +57,4 @@ const ExperienceBlock = () => {
     </section>
   );
 };
-export default block(ExperienceBlock);
+export default ExperienceBlock;
